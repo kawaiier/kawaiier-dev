@@ -1,0 +1,15 @@
+@import url('https://api.fonts.coollabs.io/css2?family=Major+Mono+Display&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Major Mono Display', monospace;
+}
+
+h1 {
+    text-align: center;
+    padding-top: 50vh;
+}
