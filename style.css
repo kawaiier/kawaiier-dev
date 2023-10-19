@@ -1,4 +1,6 @@
-@import url('https://api.fonts.coollabs.io/css2?family=Major+Mono+Display&display=swap');
+@import url('https://api.fonts.coollabs.io/css2?family=Sometype+Mono:wght@400;500;700&display=swap');
+
+
 
 * {
     margin: 0;
@@ -6,10 +8,37 @@
 }
 
 body {
-    font-family: 'Major Mono Display', monospace;
+    font-family: 'Sometype Mono', monospace;
+}
+
+header {
+    text-align: center;
 }
 
 h1 {
-    text-align: center;
-    padding-top: 50vh;
+    padding-top: 40vh;
+    font-weight: 700;
+}
+
+span {
+    color: beige;
+}
+
+main {
+    width: 600px;
+    margin: 0 auto;
+    padding-top: 24px;
+}
+
+ul {
+    list-style: circle;
+    padding-left: 16px;
+}
+
+li {
+    padding-top: 8px;
+}
+
+main>p {
+    padding-top: 24px;
 }
