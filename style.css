@@ -11,6 +11,17 @@ body {
     font-family: 'Sometype Mono', monospace;
 }
 
+.container {
+    width: 600px;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .container {
+      width: 350px
+    }
+  }
+
 header {
     text-align: center;
 }
@@ -25,7 +36,6 @@ span {
 }
 
 main {
-    width: 600px;
     margin: 0 auto;
     padding-top: 24px;
 }
