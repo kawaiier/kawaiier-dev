@@ -1,7 +1,5 @@
 @import url('https://api.fonts.coollabs.io/css2?family=Sometype+Mono:wght@400;500;700&display=swap');
 
-
-
 * {
     margin: 0;
     padding: 0;
@@ -14,30 +12,63 @@ body {
 .container {
     width: 600px;
     margin: 0 auto;
+    padding: 15vh 0;
 }
 
-@media (max-width: 768px) {
-    .container {
-      width: 350px
-    }
-  }
-
 header {
-    text-align: center;
+    text-align:  left;
 }
 
 h1 {
-    padding-top: 35vh;
     font-weight: 700;
 }
 
+h2 {
+margin-top: 24px;
+}
+
 span {
-    color: beige;
+    color: #F28482;
+    font-weight: 700;
 }
 
 main {
     margin: 0 auto;
     padding-top: 24px;
+}
+
+.question {
+    background-color: #F7EDE2;
+    border-radius: 8px;
+    margin: 8px;
+    border: 1px solid #F5CAC3;
+    margin-right: 24px;
+}
+
+.question::before {
+    content: "❓";
+    font-size: 24px;
+}
+
+.answer {
+    background-color: #F5CAC3;
+    border-radius: 8px;
+    margin: 8px;
+    border: 1px solid #F7EDE2;
+    margin-left: 24px;
+    margin-bottom: 16px;
+}
+
+.answer::before {
+    content: "❗️";
+    font-size: 24px;
+}
+
+.tag-cloud {
+    background-color: #84A59D;
+    color: #fff;
+    border-radius: 8px;
+    text-align: justify;
 }
 
 ul {
@@ -49,6 +80,12 @@ li {
     padding-top: 8px;
 }
 
-main>p {
-    padding-top: 24px;
+p {
+    padding: 8px;
 }
+
+@media (max-width: 768px) {
+    .container {
+      width: 350px
+    }
+  }
