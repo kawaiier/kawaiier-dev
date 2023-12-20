@@ -1,12 +1,11 @@
-@import url('https://api.fonts.coollabs.io/css2?family=Sometype+Mono:wght@400;500;700&display=swap');
-
 * {
     margin: 0;
     padding: 0;
 }
 
 body {
-    font-family: 'Sometype Mono', monospace;
+    font-family: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace;
+    background-color: #232946;
 }
 
 .container {
@@ -17,6 +16,16 @@ body {
 
 header {
     text-align:  left;
+    display: flex;
+}
+
+header img {
+    box-shadow: -8px 8px 0 0 #eebbc3;
+
+}
+
+h1, h2 {
+    color: #fffffe;
 }
 
 h1 {
@@ -28,7 +37,7 @@ margin-top: 24px;
 }
 
 span {
-    color: #F28482;
+    color: #d4939d;
     font-weight: 700;
 }
 
@@ -37,38 +46,39 @@ main {
     padding-top: 24px;
 }
 
+.intro {
+    margin-bottom: 24px;
+}
+
 .question {
-    background-color: #F7EDE2;
-    border-radius: 8px;
+    background-color: #d4d8f0;
+    color: #232946;
     margin: 8px;
     border: 1px solid #F5CAC3;
     margin-right: 24px;
 }
 
-.question::before {
-    content: "❓";
-    font-size: 24px;
-}
-
 .answer {
-    background-color: #F5CAC3;
-    border-radius: 8px;
+    background-color: #eebbc3;
+    color: #232946;
     margin: 8px;
     border: 1px solid #F7EDE2;
     margin-left: 24px;
     margin-bottom: 16px;
+    padding-left: 16px;
 }
 
-.answer::before {
-    content: "❗️";
-    font-size: 24px;
+.answer a {
+    color: #232946;
 }
 
 .tag-cloud {
-    background-color: #84A59D;
-    color: #fff;
-    border-radius: 8px;
+    background-color: #fffffe;
     text-align: justify;
+}
+
+.tag-cloud p {
+    color: #232946;
 }
 
 ul {
@@ -78,10 +88,21 @@ ul {
 
 li {
     padding-top: 8px;
+    color: #b8c1ec;
 }
 
 p {
     padding: 8px;
+    line-height: 1.5;
+    color: #b8c1ec;
+}
+
+a {
+    color: #eebbc3
+}
+
+a:hover {
+    opacity: 0.8;
 }
 
 @media (max-width: 768px) {
