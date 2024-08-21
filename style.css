@@ -4,7 +4,8 @@
 }
 
 body {
-    font-family: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace;
+    font-family: ui-monospace, "Cascadia Code", "Source Code Pro", Menlo,
+        Consolas, "DejaVu Sans Mono", monospace;
     background-color: #232946;
 }
 
@@ -15,16 +16,16 @@ body {
 }
 
 header {
-    text-align:  left;
+    text-align: left;
     display: flex;
 }
 
 header img {
     box-shadow: -8px 8px 0 0 #eebbc3;
-
 }
 
-h1, h2 {
+h1,
+h2 {
     color: #fffffe;
 }
 
@@ -33,7 +34,7 @@ h1 {
 }
 
 h2 {
-margin-top: 24px;
+    margin-top: 24px;
 }
 
 span {
@@ -54,7 +55,7 @@ main {
     background-color: #d4d8f0;
     color: #232946;
     margin: 8px;
-    border: 1px solid #F5CAC3;
+    border: 1px solid #f5cac3;
     margin-right: 24px;
 }
 
@@ -62,7 +63,7 @@ main {
     background-color: #eebbc3;
     color: #232946;
     margin: 8px;
-    border: 1px solid #F7EDE2;
+    border: 1px solid #f7ede2;
     margin-left: 24px;
     margin-bottom: 16px;
     padding-left: 16px;
@@ -91,14 +92,16 @@ li {
     color: #b8c1ec;
 }
 
-p {
+p,
+dt,
+dd {
     padding: 8px;
     line-height: 1.5;
     color: #b8c1ec;
 }
 
 a {
-    color: #eebbc3
+    color: #eebbc3;
 }
 
 a:hover {
@@ -107,6 +110,6 @@ a:hover {
 
 @media (max-width: 768px) {
     .container {
-      width: 350px
+        width: 350px;
     }
-  }
+}
