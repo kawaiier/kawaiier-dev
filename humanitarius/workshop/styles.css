@@ -1177,6 +1177,36 @@ body {
   line-height: 1.7;
 }
 
+.about-me {
+  padding: 80px 0;
+  background: var(--white);
+}
+
+.about-me h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: var(--raisin-black);
+}
+
+.about-me-content {
+  display: flex;
+  align-items: stretch;
+  gap: 2rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.about-me img {
+  height: 100%;
+  width: auto;
+  min-width: 180px;
+  max-width: 250px;
+  border-radius: 16px;
+  object-fit: cover;
+}
+
 .payment-info {
   background: var(--light-gray);
   border-radius: 12px;
@@ -1209,6 +1239,19 @@ body {
   .results-benefits,
   .payment-info {
     padding: 1.25rem 0.75rem;
+  }
+  .about-me-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.5rem;
+  }
+  .about-me img {
+    height: 200px;
+    width: 200px;
+    min-width: 0;
+    max-width: 100%;
+    margin: 0 auto;
   }
 }
 
