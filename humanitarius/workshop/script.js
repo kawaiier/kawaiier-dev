@@ -1,15 +1,30 @@
 const mobileMenuToggle = document.querySelector(".mobile-menu-toggle");
 const navLinks = document.querySelector(".nav-links");
+const body = document.body;
 
 mobileMenuToggle.addEventListener("click", () => {
   navLinks.classList.toggle("active");
   mobileMenuToggle.classList.toggle("active");
+  body.style.overflow = navLinks.classList.contains("active") ? "hidden" : "";
+});
+
+document.addEventListener("click", (e) => {
+  if (
+    navLinks.classList.contains("active") &&
+    !navLinks.contains(e.target) &&
+    !mobileMenuToggle.contains(e.target)
+  ) {
+    navLinks.classList.remove("active");
+    mobileMenuToggle.classList.remove("active");
+    body.style.overflow = "";
+  }
 });
 
 document.querySelectorAll(".nav-links a").forEach((link) => {
   link.addEventListener("click", () => {
     navLinks.classList.remove("active");
     mobileMenuToggle.classList.remove("active");
+    body.style.overflow = "";
   });
 });
 
@@ -314,3 +329,63 @@ const createCookieConsent = () => {
 };
 
 setTimeout(createCookieConsent, 2000);
+
+// Handle mobile orientation change
+window.addEventListener("orientationchange", () => {
+  if (navLinks.classList.contains("active")) {
+    navLinks.classList.remove("active");
+    mobileMenuToggle.classList.remove("active");
+    body.style.overflow = "";
+  }
+});
+
+// Add touch support for reviews slider
+let touchStartX = 0;
+let touchEndX = 0;
+
+const reviewsSlider = document.querySelector(".reviews-slider");
+
+reviewsSlider.addEventListener("touchstart", (e) => {
+  touchStartX = e.changedTouches[0].screenX;
+});
+
+reviewsSlider.addEventListener("touchend", (e) => {
+  touchEndX = e.changedTouches[0].screenX;
+  handleSwipe();
+});
+
+function handleSwipe() {
+  const swipeThreshold = 50;
+  const swipeLength = touchEndX - touchStartX;
+
+  if (Math.abs(swipeLength) > swipeThreshold) {
+    if (swipeLength > 0) {
+      prevReview();
+    } else {
+      nextReview();
+    }
+  }
+}
+
+// Improve modal handling on mobile
+const modalContent = enrollmentModal.querySelector(".modal-content");
+
+enrollmentModal.addEventListener(
+  "touchmove",
+  (e) => {
+    if (e.target === enrollmentModal) {
+      e.preventDefault();
+    }
+  },
+  { passive: false }
+);
+
+// Handle mobile keyboard appearance
+const inputs = document.querySelectorAll("input, textarea");
+inputs.forEach((input) => {
+  input.addEventListener("focus", () => {
+    setTimeout(() => {
+      window.scrollTo(0, window.scrollY);
+    }, 200);
+  });
+});
