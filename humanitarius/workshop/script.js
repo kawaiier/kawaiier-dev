@@ -205,21 +205,6 @@ const codeObserver = new IntersectionObserver((entries) => {
 
 codeObserver.observe(codePreview);
 
-const updateSpotsLeft = () => {
-  const spotsElement = document.querySelector(".spots-left");
-  const currentSpots = parseInt(spotsElement.textContent);
-
-  if (Math.random() > 0.8 && currentSpots > 3) {
-    spotsElement.textContent = currentSpots - 1;
-    spotsElement.style.animation = "pulse 0.5s ease";
-    setTimeout(() => {
-      spotsElement.style.animation = "";
-    }, 500);
-  }
-};
-
-setInterval(updateSpotsLeft, 30000);
-
 const validateEmail = (email) => {
   const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return re.test(email);
