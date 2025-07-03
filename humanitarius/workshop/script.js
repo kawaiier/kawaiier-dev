@@ -375,67 +375,6 @@ inputs.forEach((input) => {
   });
 });
 
-// Instagram Sticky Panel functionality
-document.addEventListener("DOMContentLoaded", function () {
-  const instagramPanel = document.querySelector(".instagram-sticky-panel");
-  const panelClose = document.querySelector(".panel-close");
-  let panelShown = true; // Panel starts visible
-  let scrollTimer = null;
-
-  // Show panel after 3 seconds or on scroll down
-  function showPanel() {
-    if (!panelShown && !localStorage.getItem("instagram-panel-dismissed")) {
-      instagramPanel.classList.remove("hidden");
-      instagramPanel.classList.add("show");
-      panelShown = true;
-    }
-  }
-
-  // Hide panel
-  function hidePanel() {
-    instagramPanel.classList.remove("show");
-    instagramPanel.classList.add("hidden");
-    localStorage.setItem("instagram-panel-dismissed", "true");
-    panelShown = false;
-  }
-
-  // Check if panel was previously dismissed
-  if (localStorage.getItem("instagram-panel-dismissed")) {
-    hidePanel();
-  }
-
-  // Show panel on scroll down (if not already shown)
-  let lastScrollTop = 0;
-  window.addEventListener("scroll", function () {
-    if (scrollTimer) {
-      clearTimeout(scrollTimer);
-    }
-
-    scrollTimer = setTimeout(function () {
-      const scrollTop =
-        window.pageYOffset || document.documentElement.scrollTop;
-
-      // Show panel if scrolling down and past 200px
-      if (scrollTop > 200 && scrollTop > lastScrollTop) {
-        showPanel();
-      }
-
-      lastScrollTop = scrollTop;
-    }, 100);
-  });
-
-  // Close panel when close button is clicked
-  if (panelClose) {
-    panelClose.addEventListener("click", hidePanel);
-  }
-
-  // Close panel when clicking outside (optional)
-  document.addEventListener("click", function (e) {
-    if (!instagramPanel.contains(e.target) && panelShown) {
-      // Uncomment if you want to close on outside click
-      // hidePanel();
-    }
-  });
-});
+// Instagram panel is now permanent - no JavaScript needed
 
 console.log("Ого! Да вы хакер!");

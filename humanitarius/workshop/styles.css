@@ -1499,17 +1499,7 @@ body {
     padding: 12px 0;
     box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.15);
     z-index: 1000;
-    transform: translateY(0);
-    transition: transform 0.4s ease-in-out;
     display: block;
-}
-
-.instagram-sticky-panel.show {
-    transform: translateY(0);
-}
-
-.instagram-sticky-panel.hidden {
-    transform: translateY(100%);
 }
 
 .instagram-sticky-panel .panel-content {
@@ -1517,7 +1507,6 @@ body {
     align-items: center;
     justify-content: space-between;
     gap: 20px;
-    position: relative;
 }
 
 .instagram-sticky-panel .panel-text {
@@ -1561,34 +1550,6 @@ body {
     color: white;
 }
 
-.instagram-sticky-panel .panel-close {
-    background: none;
-    border: none;
-    color: white;
-    font-size: 24px;
-    font-weight: 300;
-    cursor: pointer;
-    padding: 0;
-    width: 30px;
-    height: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    transition: all 0.3s ease;
-}
-
-.panel-buttons {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-}
-
-.instagram-sticky-panel .panel-close:hover {
-    background: rgba(255, 255, 255, 0.2);
-    transform: scale(1.1);
-}
 
 @media (max-width: 768px) {
     .instagram-sticky-panel {
