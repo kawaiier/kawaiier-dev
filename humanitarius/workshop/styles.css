@@ -888,6 +888,7 @@ body {
 
 .footer {
     padding: 3rem 0;
+    padding-bottom: 4rem;
     background: var(--raisin-black);
     color: var(--white);
 }
@@ -1505,6 +1506,10 @@ body {
 
 .instagram-sticky-panel.show {
     transform: translateY(0);
+}
+
+.instagram-sticky-panel.hidden {
+    transform: translateY(100%);
 }
 
 .instagram-sticky-panel .panel-content {
