@@ -1473,3 +1473,140 @@ body {
     transform: translateX(-50%) translateY(0);
   }
 }
+
+/* Instagram Sticky Panel */
+.instagram-sticky-panel {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045);
+  color: white;
+  padding: 12px 0;
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  transform: translateY(100%);
+  transition: transform 0.4s ease-in-out;
+}
+
+.instagram-sticky-panel.show {
+  transform: translateY(0);
+}
+
+.instagram-sticky-panel .panel-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  position: relative;
+}
+
+.instagram-sticky-panel .panel-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.instagram-sticky-panel .panel-title {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+.instagram-sticky-panel .panel-subtitle {
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.instagram-sticky-panel .btn-instagram {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 10px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  white-space: nowrap;
+}
+
+.instagram-sticky-panel .btn-instagram:hover {
+  background: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: translateY(-1px);
+  color: white;
+}
+
+.instagram-sticky-panel .panel-close {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  font-weight: 300;
+  cursor: pointer;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  position: absolute;
+  right: -10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.instagram-sticky-panel .panel-close:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-50%) scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .instagram-sticky-panel {
+    padding: 10px 0;
+  }
+  
+  .instagram-sticky-panel .panel-content {
+    gap: 15px;
+    padding-right: 40px;
+  }
+  
+  .instagram-sticky-panel .panel-title {
+    font-size: 14px;
+  }
+  
+  .instagram-sticky-panel .panel-subtitle {
+    font-size: 12px;
+  }
+  
+  .instagram-sticky-panel .btn-instagram {
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .instagram-sticky-panel .panel-text {
+    flex: 1;
+  }
+  
+  .instagram-sticky-panel .panel-title {
+    font-size: 13px;
+  }
+  
+  .instagram-sticky-panel .btn-instagram span {
+    display: none;
+  }
+  
+  .instagram-sticky-panel .btn-instagram {
+    padding: 8px;
+    min-width: 36px;
+  }
+}

@@ -374,3 +374,60 @@ inputs.forEach((input) => {
     }, 200);
   });
 });
+
+// Instagram Sticky Panel functionality
+document.addEventListener('DOMContentLoaded', function() {
+  const instagramPanel = document.querySelector('.instagram-sticky-panel');
+  const panelClose = document.querySelector('.panel-close');
+  let panelShown = false;
+  let scrollTimer = null;
+
+  // Show panel after 3 seconds or on scroll down
+  function showPanel() {
+    if (!panelShown && !localStorage.getItem('instagram-panel-dismissed')) {
+      instagramPanel.classList.add('show');
+      panelShown = true;
+    }
+  }
+
+  // Hide panel
+  function hidePanel() {
+    instagramPanel.classList.remove('show');
+    localStorage.setItem('instagram-panel-dismissed', 'true');
+  }
+
+  // Show panel after 3 seconds
+  setTimeout(showPanel, 3000);
+
+  // Show panel on scroll down (if not already shown)
+  let lastScrollTop = 0;
+  window.addEventListener('scroll', function() {
+    if (scrollTimer) {
+      clearTimeout(scrollTimer);
+    }
+    
+    scrollTimer = setTimeout(function() {
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      
+      // Show panel if scrolling down and past 200px
+      if (scrollTop > 200 && scrollTop > lastScrollTop) {
+        showPanel();
+      }
+      
+      lastScrollTop = scrollTop;
+    }, 100);
+  });
+
+  // Close panel when close button is clicked
+  if (panelClose) {
+    panelClose.addEventListener('click', hidePanel);
+  }
+
+  // Close panel when clicking outside (optional)
+  document.addEventListener('click', function(e) {
+    if (!instagramPanel.contains(e.target) && panelShown) {
+      // Uncomment if you want to close on outside click
+      // hidePanel();
+    }
+  });
+});
