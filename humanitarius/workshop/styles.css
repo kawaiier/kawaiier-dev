@@ -1558,7 +1558,6 @@ body {
 
     .instagram-sticky-panel .panel-content {
         gap: 15px;
-        padding-right: 40px;
     }
 
     .instagram-sticky-panel .panel-title {
@@ -1584,12 +1583,8 @@ body {
         font-size: 13px;
     }
 
-    .instagram-sticky-panel .btn-instagram span {
-        display: none;
-    }
-
     .instagram-sticky-panel .btn-instagram {
-        padding: 8px;
-        min-width: 36px;
+        padding: 8px 12px;
+        font-size: 12px;
     }
 }
