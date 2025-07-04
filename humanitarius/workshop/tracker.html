@@ -2,6 +2,103 @@
 <html>
     <head>
         <title>My water tracker</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                text-align: center;
+                background: linear-gradient(135deg, #74b9ff, #0984e3);
+                margin: 0;
+                padding: 20px;
+                min-height: 100vh;
+                color: white;
+            }
+
+            header h1 {
+                font-size: 2.5em;
+                margin: 20px 0;
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            }
+
+            main {
+                max-width: 400px;
+                margin: 0 auto;
+                background: rgba(255, 255, 255, 0.1);
+                padding: 30px;
+                border-radius: 20px;
+                box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+                backdrop-filter: blur(10px);
+                border: 1px solid rgba(255, 255, 255, 0.2);
+            }
+
+            img {
+                margin: 20px 0;
+                filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+            }
+
+            .grey {
+                background: rgba(0, 0, 0, 0.2);
+                padding: 20px;
+                border-radius: 15px;
+                margin: 20px 0;
+            }
+
+            .white-text {
+                color: white;
+                margin: 10px 0;
+            }
+
+            #counter {
+                font-size: 3em;
+                font-weight: bold;
+                margin: 10px 0;
+                color: #74b9ff;
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            }
+
+            #glasses {
+                font-size: 2em;
+                font-weight: bold;
+                color: #00b894;
+            }
+
+            button {
+                background: #00b894;
+                color: white;
+                border: none;
+                padding: 15px 30px;
+                margin: 10px;
+                border-radius: 25px;
+                font-size: 1.1em;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            }
+
+            button:hover {
+                background: #00a085;
+                transform: translateY(-2px);
+                box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+            }
+
+            button:active {
+                transform: translateY(0);
+            }
+
+            footer {
+                margin-top: 30px;
+                opacity: 0.8;
+            }
+
+            footer a {
+                color: #74b9ff;
+                text-decoration: none;
+                font-weight: bold;
+            }
+
+            footer a:hover {
+                text-decoration: underline;
+            }
+        </style>
     </head>
     <body>
         <header>
@@ -13,19 +110,88 @@
                 width="100"
             />
             <div class="grey">
-                <p id="counter"></p>
+                <p id="counter">💧</p>
                 <p class="white-text">
                     <span id="glasses">0</span>
                     <span id="word"> стаканов</span> воды
                 </p>
             </div>
-            <button onclick="drink()">Я выпил воды</button>
-            <button onclick="reset()">Новый день</button>
+            <button onclick="drink()">Я выпил воды 💧</button>
+            <button onclick="reset()">Новый день 🌅</button>
         </main>
         <footer>
             <p class="white-text">
                 Сайт разработан <a href="https://kawaiier.dev">Серегой</a>
             </p>
         </footer>
+
+        <script>
+            let glassCount = 0;
+
+            function loadData() {
+                const saved = localStorage.getItem("waterTracker");
+                if (saved) {
+                    const data = JSON.parse(saved);
+                    const today = new Date().toDateString();
+                    if (data.date === today) {
+                        glassCount = data.glasses;
+                    } else {
+                        glassCount = 0;
+                    }
+                }
+                updateDisplay();
+            }
+
+            function saveData() {
+                const data = {
+                    glasses: glassCount,
+                    date: new Date().toDateString(),
+                };
+                localStorage.setItem("waterTracker", JSON.stringify(data));
+            }
+
+            function drink() {
+                glassCount++;
+                updateDisplay();
+                saveData();
+            }
+
+            function reset() {
+                glassCount = 0;
+                updateDisplay();
+                saveData();
+            }
+
+            function updateDisplay() {
+                const counter = document.getElementById("counter");
+                const glasses = document.getElementById("glasses");
+                const word = document.getElementById("word");
+
+                glasses.textContent = glassCount;
+
+                if (glassCount === 0) {
+                    word.textContent = " стаканов";
+                } else if (glassCount === 1) {
+                    word.textContent = " стакан";
+                } else if (glassCount >= 2 && glassCount <= 4) {
+                    word.textContent = " стакана";
+                } else {
+                    word.textContent = " стаканов";
+                }
+
+                let waterEmoji = "";
+                for (let i = 0; i < glassCount; i++) {
+                    waterEmoji += "🥃";
+                }
+
+                if (glassCount === 0) {
+                    waterEmoji = "💧";
+                }
+
+                counter.textContent = waterEmoji;
+            }
+
+            window.onload = loadData;
+        </script>
     </body>
 </html>
