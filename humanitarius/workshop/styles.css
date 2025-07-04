@@ -1008,6 +1008,20 @@ body {
     }
 }
 
+@media (max-width: 820px) and (orientation: portrait) {
+    .hero {
+        padding: 140px 0 80px;
+    }
+    
+    .navigation {
+        padding: 0.5rem 0;
+    }
+    
+    .nav-content {
+        padding: 0.75rem 0;
+    }
+}
+
 @media (max-width: 768px) {
     .mobile-menu-toggle {
         display: flex;
@@ -1028,6 +1042,10 @@ body {
 
     .nav-links.active {
         display: flex;
+    }
+
+    .hero {
+        padding: 110px 0 60px;
     }
 
     .hero-content {
