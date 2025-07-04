@@ -1010,7 +1010,7 @@ body {
 
 @media (max-width: 820px) and (orientation: portrait) {
     .hero {
-        padding: 140px 0 80px;
+        padding: 100px 0 80px;
     }
 
     .navigation {
@@ -1019,6 +1019,36 @@ body {
 
     .nav-content {
         padding: 0.75rem 0;
+    }
+}
+
+/* Safari iPad specific - measured 78px header */
+@supports (-webkit-touch-callout: none) {
+    @media (max-width: 820px) and (orientation: portrait) {
+        .hero {
+            padding: 95px 0 80px;
+        }
+    }
+}
+
+/* Firefox iPad fix - measured 1150px header issue */
+@-moz-document url-prefix() {
+    @media (max-width: 820px) and (orientation: portrait) {
+        .navigation {
+            position: absolute;
+            top: 0;
+            max-height: 80px;
+            overflow: hidden;
+        }
+        
+        .nav-links {
+            max-height: calc(100vh - 80px) !important;
+        }
+        
+        .hero {
+            padding: 90px 0 80px;
+            margin-top: 0;
+        }
     }
 }
 
