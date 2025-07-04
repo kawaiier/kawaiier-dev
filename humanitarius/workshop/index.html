@@ -1,296 +1,331 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
-  <!-- ✔ обновил даты, поправил кавычки и добавил недостающие детали -->
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>
-      Веб-разработка с нуля: интенсив для гуманитариев | 5–6 июля 2025
-    </title>
+    <!-- ✔ обновил даты, поправил кавычки и добавил недостающие детали -->
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>
+            Веб-разработка с нуля: интенсив для гуманитариев | 5–6 июля 2025
+        </title>
 
-    <!-- SEO -->
-    <meta
-      name="description"
-      content="Создай свой первый сайт за 5 часов. Без математики и тех-фона. Мини-группа 8 человек, 5–6 июля 2025."
-    />
-    <link rel="canonical" href="https://kawaiier.dev/humanitarius/workshop/" />
-    <meta name="robots" content="index,follow" />
+        <!-- SEO -->
+        <meta
+            name="description"
+            content="Создай свой первый сайт за 5 часов. Без математики и тех-фона. Мини-группа 8 человек, 5–6 июля 2025."
+        />
+        <link
+            rel="canonical"
+            href="https://kawaiier.dev/humanitarius/workshop/"
+        />
+        <meta name="robots" content="index,follow" />
 
-    <!-- Styles / Favicon -->
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+        <!-- Styles / Favicon -->
+        <link rel="stylesheet" href="styles.css" />
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
 
-    <!-- Open Graph -->
-    <meta property="og:type" content="website" />
-    <meta
-      property="og:url"
-      content="https://kawaiier.dev/humanitarius/workshop/"
-    />
-    <meta
-      property="og:title"
-      content="Веб-разработка с нуля: интенсив для гуманитариев | 5–6 июля 2025"
-    />
-    <meta
-      property="og:description"
-      content="Онлайн-интенсив: за 5 часов создадим сайт с нуля. Мини-группа, поддержка наставника-гуманитария."
-    />
-    <meta
-      property="og:image"
-      content="https://kawaiier.dev/og/humanitarius-workshop.webp"
-    />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta property="og:locale" content="ru_RU" />
+        <!-- Scripts -->
+        <script src="/humanitarius/workshop/script.js" defer></script>
 
-    <!-- Twitter card -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta
-      name="twitter:title"
-      content="Веб-разработка с нуля: интенсив для гуманитариев | 5–6 июля 2025"
-    />
-    <meta
-      name="twitter:description"
-      content="Создай сайт за 5 часов даже без тех-опыта. Старт 5 июля."
-    />
-    <meta
-      name="twitter:image"
-      content="https://kawaiier.dev/og/humanitarius-workshop.webp"
-    />
+        <!-- Open Graph -->
+        <meta property="og:type" content="website" />
+        <meta
+            property="og:url"
+            content="https://kawaiier.dev/humanitarius/workshop/"
+        />
+        <meta
+            property="og:title"
+            content="Веб-разработка с нуля: интенсив для гуманитариев | 5–6 июля 2025"
+        />
+        <meta
+            property="og:description"
+            content="Онлайн-интенсив: за 5 часов создадим сайт с нуля. Мини-группа, поддержка наставника-гуманитария."
+        />
+        <meta
+            property="og:image"
+            content="https://kawaiier.dev/og/humanitarius-workshop.webp"
+        />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:locale" content="ru_RU" />
 
-    <!-- FAQ Schema -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "Я никогда не писал код. Реально успею что-то сделать?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Да! Мы идём от абсолютного «нуля»: вставим готовый тег, изменим слово, увидим результат. Даже гуманитарий сможет написать первую строчку кода."
+        <!-- Twitter card -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+            name="twitter:title"
+            content="Веб-разработка с нуля: интенсив для гуманитариев | 5–6 июля 2025"
+        />
+        <meta
+            name="twitter:description"
+            content="Создай сайт за 5 часов даже без тех-опыта. Старт 5 июля."
+        />
+        <meta
+            name="twitter:image"
+            content="https://kawaiier.dev/og/humanitarius-workshop.webp"
+        />
+
+        <!-- FAQ Schema -->
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "FAQPage",
+                "mainEntity": [
+                    {
+                        "@type": "Question",
+                        "name": "Я никогда не писал код. Реально успею что-то сделать?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Да! Мы идём от абсолютного «нуля»: вставим готовый тег, изменим слово, увидим результат. Даже гуманитарий сможет написать первую строчку кода."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Мне 40+. Не поздно ли начинать?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Возраст не помеха. Среди учеников были люди 45+; опыт и дисциплина помогают учиться быстрее молодых."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Поможет ли интенсив сразу найти работу?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "За 5 часов вы не станете джуном. Зато поймёте: нравится ли процесс, какие роли в веб-разработке существуют, сколько времени нужно будет вложить в обучение дальше. Это «дешёвая ошибка»: лучше потратить $50 (4000₽/140₾) и 5 часов, чем 6 месяцев и 60 000₽ на курсе, который может не зайти."
+                        }
+                    }
+                ]
             }
-          },
-          {
-            "@type": "Question",
-            "name": "Мне 40+. Не поздно ли начинать?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Возраст не помеха. Среди учеников были люди 45+; опыт и дисциплина помогают учиться быстрее молодых."
+        </script>
+
+        <!-- Event Schema -->
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "Event",
+                "name": "Веб-разработка с нуля: интенсив для гуманитариев",
+                "startDate": "2025-07-05T11:00:00+04:00",
+                "endDate": "2025-07-06T13:00:00+04:00",
+                "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
+                "eventStatus": "https://schema.org/EventScheduled",
+                "location": {
+                    "@type": "VirtualLocation",
+                    "url": "https://kawaiier.dev/humanitarius/workshop/"
+                },
+                "image": ["https://kawaiier.dev/og/humanitarius-workshop.webp"],
+                "description": "Онлайн-интенсив 5–6 июля 2025: создайте свой первый сайт за 5 часов даже без тех-опыта.",
+                "offers": [
+                    {
+                        "@type": "Offer",
+                        "price": "50",
+                        "priceCurrency": "USD",
+                        "availability": "https://schema.org/InStock",
+                        "url": "https://kawaiier.dev/humanitarius/workshop/#pricing",
+                        "validFrom": "2025-05-01T00:00:00+04:00"
+                    },
+                    {
+                        "@type": "Offer",
+                        "price": "4000",
+                        "priceCurrency": "RUB",
+                        "availability": "https://schema.org/InStock",
+                        "url": "https://kawaiier.dev/humanitarius/workshop/#pricing",
+                        "validFrom": "2025-05-01T00:00:00+04:00"
+                    },
+                    {
+                        "@type": "Offer",
+                        "price": "140",
+                        "priceCurrency": "GEL",
+                        "availability": "https://schema.org/InStock",
+                        "url": "https://kawaiier.dev/humanitarius/workshop/#pricing",
+                        "validFrom": "2025-05-01T00:00:00+04:00"
+                    }
+                ],
+                "performer": {
+                    "@type": "Person",
+                    "name": "Сергей Манвелов"
+                },
+                "organizer": {
+                    "@type": "Organization",
+                    "name": "Humanitarius",
+                    "url": "https://kawaiier.dev"
+                }
             }
-          },
-          {
-            "@type": "Question",
-            "name": "Поможет ли интенсив сразу найти работу?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "За 5 часов вы не станете джуном. Зато поймёте: нравится ли процесс, какие роли в веб-разработке существуют, сколько времени нужно будет вложить в обучение дальше. Это «дешёвая ошибка»: лучше потратить $50 (4000₽/140₾) и 5 часов, чем 6 месяцев и 60 000₽ на курсе, который может не зайти."
+        </script>
+
+        <!-- Organization Schema -->
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "Organization",
+                "name": "Humanitarius",
+                "url": "https://kawaiier.dev",
+                "logo": "https://kawaiier.dev/logo.svg",
+                "sameAs": ["https://t.me/kawaiier"]
             }
-          }
-        ]
-      }
-    </script>
+        </script>
+        <!-- Yandex.Metrika counter -->
+        <script type="text/javascript">
+            (function (m, e, t, r, i, k, a) {
+                m[i] =
+                    m[i] ||
+                    function () {
+                        (m[i].a = m[i].a || []).push(arguments);
+                    };
+                m[i].l = 1 * new Date();
+                for (var j = 0; j < document.scripts.length; j++) {
+                    if (document.scripts[j].src === r) {
+                        return;
+                    }
+                }
+                ((k = e.createElement(t)),
+                    (a = e.getElementsByTagName(t)[0]),
+                    (k.async = 1),
+                    (k.src = r),
+                    a.parentNode.insertBefore(k, a));
+            })(
+                window,
+                document,
+                "script",
+                "https://mc.yandex.ru/metrika/tag.js",
+                "ym",
+            );
 
-    <!-- Event Schema -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Event",
-        "name": "Веб-разработка с нуля: интенсив для гуманитариев",
-        "startDate": "2025-07-05T11:00:00+04:00",
-        "endDate": "2025-07-06T13:00:00+04:00",
-        "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
-        "eventStatus": "https://schema.org/EventScheduled",
-        "location": {
-          "@type": "VirtualLocation",
-          "url": "https://kawaiier.dev/humanitarius/workshop/"
-        },
-        "image": ["https://kawaiier.dev/og/humanitarius-workshop.webp"],
-        "description": "Онлайн-интенсив 5–6 июля 2025: создайте свой первый сайт за 5 часов даже без тех-опыта.",
-        "offers": [{
-          "@type": "Offer",
-          "price": "50",
-          "priceCurrency": "USD",
-          "availability": "https://schema.org/InStock",
-          "url": "https://kawaiier.dev/humanitarius/workshop/#pricing",
-          "validFrom": "2025-05-01T00:00:00+04:00"
-        }, {
-          "@type": "Offer",
-          "price": "4000",
-          "priceCurrency": "RUB",
-          "availability": "https://schema.org/InStock",
-          "url": "https://kawaiier.dev/humanitarius/workshop/#pricing",
-          "validFrom": "2025-05-01T00:00:00+04:00"
-        }, {
-          "@type": "Offer",
-          "price": "140",
-          "priceCurrency": "GEL",
-          "availability": "https://schema.org/InStock",
-          "url": "https://kawaiier.dev/humanitarius/workshop/#pricing",
-          "validFrom": "2025-05-01T00:00:00+04:00"
-        }],
-        "performer": {
-          "@type": "Person",
-          "name": "Сергей Манвелов"
-        },
-        "organizer": {
-          "@type": "Organization",
-          "name": "Humanitarius",
-          "url": "https://kawaiier.dev"
-        }
-      }
-    </script>
-
-    <!-- Organization Schema -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "Humanitarius",
-        "url": "https://kawaiier.dev",
-        "logo": "https://kawaiier.dev/logo.svg",
-        "sameAs": ["https://t.me/kawaiier"]
-      }
-    </script>
-    <!-- Yandex.Metrika counter -->
-    <script type="text/javascript">
-      (function (m, e, t, r, i, k, a) {
-        m[i] =
-          m[i] ||
-          function () {
-            (m[i].a = m[i].a || []).push(arguments);
-          };
-        m[i].l = 1 * new Date();
-        for (var j = 0; j < document.scripts.length; j++) {
-          if (document.scripts[j].src === r) {
-            return;
-          }
-        }
-        (k = e.createElement(t)),
-          (a = e.getElementsByTagName(t)[0]),
-          (k.async = 1),
-          (k.src = r),
-          a.parentNode.insertBefore(k, a);
-      })(
-        window,
-        document,
-        "script",
-        "https://mc.yandex.ru/metrika/tag.js",
-        "ym"
-      );
-
-      ym(103009787, "init", {
-        clickmap: true,
-        trackLinks: true,
-        accurateTrackBounce: true,
-      });
-    </script>
-    <noscript
-      ><div>
-        <img
-          src="https://mc.yandex.ru/watch/103009787"
-          style="position: absolute; left: -9999px"
-          alt=""
-        /></div
-    ></noscript>
-    <!-- /Yandex.Metrika counter -->
-  </head>
-  <body>
-    <nav class="navigation">
-      <div class="container">
-        <div class="nav-content">
-          <div class="logo">
-            human<span style="color: #9d1f15">it</span>arius
-          </div>
-          <button class="mobile-menu-toggle" aria-label="Открыть меню">
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>
-          <ul class="nav-links">
-            <li><a href="#about">О курсе</a></li>
-            <li><a href="#program">Программа</a></li>
-            <li><a href="#results">Результаты</a></li>
-            <li><a href="#reviews">Отзывы</a></li>
-            <li><a href="#faq">FAQ</a></li>
-            <li><a href="#pricing" class="cta-nav">Записаться</a></li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-
-    <header class="hero">
-      <div class="container">
-        <div class="hero-content">
-          <div class="hero-text">
-            <div class="hero-badge">5-6 июля • Онлайн • 8 мест</div>
-            <h1>
-              Веб-разработка с нуля:
-              <span class="highlight">интенсив для гуманитариев</span>
-            </h1>
-            <p class="hero-subtitle">
-              Создай свой первый работающий сайт за 5 часов. Без математики,
-              сложных терминов и установки программ.
-            </p>
-            <div class="hero-features">
-              <div class="feature-item">
-                <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                >
-                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                </svg>
-                <span>Практика с первой минуты</span>
-              </div>
-              <div class="feature-item">
-                <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                >
-                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                </svg>
-                <span>Мини-группа 8 человек</span>
-              </div>
-              <div class="feature-item">
-                <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                >
-                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                </svg>
-                <span>Готовый сайт в портфолио</span>
-              </div>
+            ym(103009787, "init", {
+                clickmap: true,
+                trackLinks: true,
+                accurateTrackBounce: true,
+            });
+        </script>
+        <noscript
+            ><div>
+                <img
+                    src="https://mc.yandex.ru/watch/103009787"
+                    style="position: absolute; left: -9999px"
+                    alt=""
+                /></div
+        ></noscript>
+        <!-- /Yandex.Metrika counter -->
+    </head>
+    <body>
+        <nav class="navigation">
+            <div class="container">
+                <div class="nav-content">
+                    <div class="logo">
+                        human<span style="color: #9d1f15">it</span>arius
+                    </div>
+                    <button
+                        class="mobile-menu-toggle"
+                        aria-label="Открыть меню"
+                    >
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <ul class="nav-links">
+                        <li><a href="#about">О курсе</a></li>
+                        <li><a href="#program">Программа</a></li>
+                        <li><a href="#results">Результаты</a></li>
+                        <li><a href="#reviews">Отзывы</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li>
+                            <a href="#pricing" class="cta-nav">Записаться</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <div class="hero-cta">
-              <a href="#pricing" class="btn btn-primary"
-                >Записаться на интенсив</a
-              >
-              <div class="price-info">от $50 / 4000₽ / 140₾</div>
-            </div>
-          </div>
-          <div class="hero-visual">
-            <div class="code-preview">
-              <div class="code-header">
-                <span class="dot red"></span>
-                <span class="dot yellow"></span>
-                <span class="dot green"></span>
-              </div>
-              <pre class="code-content">
+        </nav>
+
+        <main>
+            <header class="hero">
+                <div class="container">
+                    <div class="hero-content">
+                        <div class="hero-text">
+                            <div class="hero-badge">
+                                5-6 июля • Онлайн • 8 мест
+                            </div>
+                            <h1>
+                                Веб-разработка с нуля:
+                                <span class="highlight"
+                                    >интенсив для гуманитариев</span
+                                >
+                            </h1>
+                            <p class="hero-subtitle">
+                                Создай свой первый работающий сайт за 5 часов.
+                                Без математики, сложных терминов и установки
+                                программ.
+                            </p>
+                            <div class="hero-features">
+                                <div class="feature-item">
+                                    <svg
+                                        width="24"
+                                        height="24"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="2"
+                                    >
+                                        <path
+                                            d="M22 11.08V12a10 10 0 1 1-5.93-9.14"
+                                        ></path>
+                                        <polyline
+                                            points="22 4 12 14.01 9 11.01"
+                                        ></polyline>
+                                    </svg>
+                                    <span>Практика с первой минуты</span>
+                                </div>
+                                <div class="feature-item">
+                                    <svg
+                                        width="24"
+                                        height="24"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="2"
+                                    >
+                                        <path
+                                            d="M22 11.08V12a10 10 0 1 1-5.93-9.14"
+                                        ></path>
+                                        <polyline
+                                            points="22 4 12 14.01 9 11.01"
+                                        ></polyline>
+                                    </svg>
+                                    <span>Мини-группа 8 человек</span>
+                                </div>
+                                <div class="feature-item">
+                                    <svg
+                                        width="24"
+                                        height="24"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="2"
+                                    >
+                                        <path
+                                            d="M22 11.08V12a10 10 0 1 1-5.93-9.14"
+                                        ></path>
+                                        <polyline
+                                            points="22 4 12 14.01 9 11.01"
+                                        ></polyline>
+                                    </svg>
+                                    <span>Готовый сайт в портфолио</span>
+                                </div>
+                            </div>
+                            <div class="hero-cta">
+                                <a href="#pricing" class="btn btn-primary"
+                                    >Записаться на интенсив</a
+                                >
+                                <div class="price-info">
+                                    от $50 / 4000₽ / 140₾
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hero-visual">
+                            <div class="code-preview">
+                                <div class="code-header">
+                                    <span class="dot red"></span>
+                                    <span class="dot yellow"></span>
+                                    <span class="dot green"></span>
+                                </div>
+                                <pre class="code-content">
 <span class="tag">&lt;html&gt;</span>
   <span class="tag">&lt;body&gt;</span>
     <span class="tag">&lt;h1&gt;</span><span class="text">Мой первый сайт!</span><span class="tag">&lt;/h1&gt;</span>
@@ -299,751 +334,1001 @@
     <span class="tag">&lt;/button&gt;</span>
   <span class="tag">&lt;/body&gt;</span>
 <span class="tag">&lt;/html&gt;</span></pre>
-            </div>
-          </div>
-        </div>
-      </div>
-    </header>
-
-    <section id="about" class="about">
-      <div class="container">
-        <h2>Зачем тебе этот интенсив?</h2>
-        <div class="about-instructor">
-          <h3>Почему это стоит твоих 5 часов</h3>
-          <ul>
-            <li>
-              <strong>Практика с первой минуты.</strong> Пишем код онлайн, без
-              «воды».
-            </li>
-            <li>
-              <strong>Человеческий язык.</strong> Я — бывший
-              журналист-гуманитарий, поэтому объясняю без техно-жаргона.
-            </li>
-            <li><strong>Мини-группа 8 чел.</strong> Успею помочь каждому.</li>
-            <li>
-              <strong>Полезные материалы по итогу:</strong> запись интенсива,
-              чат с другими участниками, конспект-шпаргалка и чек-лист ресурсов.
-            </li>
-          </ul>
-          <div class="key-result">
-            <p>
-              <strong
-                >Главное — работающий сайт, который можно показать знакомым и
-                которым можно пользоваться в повседневной жизни</strong
-              >
-            </p>
-          </div>
-        </div>
-        <div class="about-grid">
-          <div class="about-card">
-            <div class="about-icon">
-              <svg
-                width="48"
-                height="48"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <path
-                  d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z"
-                ></path>
-              </svg>
-            </div>
-            <h3>Безопасный старт</h3>
-            <p>
-              Попробуй программирование без долгих и дорогих курсов. Поймёшь,
-              твоё это или нет, всего за 5 часов.
-            </p>
-          </div>
-          <div class="about-card">
-            <div class="about-icon">
-              <svg
-                width="48"
-                height="48"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
-                <line x1="9" y1="9" x2="15" y2="9"></line>
-                <line x1="9" y1="13" x2="15" y2="13"></line>
-                <line x1="9" y1="17" x2="15" y2="17"></line>
-              </svg>
-            </div>
-            <h3>Реальный результат</h3>
-            <p>
-              С первого занятия пишешь код. К концу интенсива — готовый
-              работающий сайт, который можно показать друзьям.
-            </p>
-          </div>
-          <div class="about-card">
-            <div class="about-icon">
-              <svg
-                width="48"
-                height="48"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                <circle cx="9" cy="7" r="4"></circle>
-                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-              </svg>
-            </div>
-            <h3>Человеческий подход</h3>
-            <p>
-              Я сам бывший гуманитарий. Объясняю без техно-жаргона, через
-              понятные аналогии из жизни.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="program" class="program">
-      <div class="container">
-        <h2>Программа интенсива</h2>
-        <div class="schedule">
-          <div class="day">
-            <div class="day-header">
-              <h3>День 1: Суббота, 5 июля</h3>
-              <span class="time">10:00 – 13:00 (GMT+4)</span>
-            </div>
-            <div class="day-content">
-              <div class="lesson">
-                <div class="lesson-time">10:00</div>
-                <div class="lesson-info">
-                  <h4>Добро пожаловать</h4>
-                  <p>Знакомство, настройка рабочего пространства</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
-              <div class="lesson">
-                <div class="lesson-time">10:30</div>
-                <div class="lesson-info">
-                  <h4>HTML: каркас страницы</h4>
-                  <p>Теги, структура документа, первые элементы</p>
+            </header>
+
+            <section id="about" class="about" aria-labelledby="about-heading">
+                <div class="container">
+                    <h2 id="about-heading">Зачем тебе этот интенсив?</h2>
+                    <div class="about-instructor">
+                        <h3>Почему это стоит твоих 5 часов</h3>
+                        <ul>
+                            <li>
+                                <strong>Практика с первой минуты.</strong> Пишем
+                                код онлайн, без «воды».
+                            </li>
+                            <li>
+                                <strong>Человеческий язык.</strong> Я — бывший
+                                журналист-гуманитарий, поэтому объясняю без
+                                техно-жаргона.
+                            </li>
+                            <li>
+                                <strong>Мини-группа 8 чел.</strong> Успею помочь
+                                каждому.
+                            </li>
+                            <li>
+                                <strong>Полезные материалы по итогу:</strong>
+                                запись интенсива, чат с другими участниками,
+                                конспект-шпаргалка и чек-лист ресурсов.
+                            </li>
+                        </ul>
+                        <div class="key-result">
+                            <p>
+                                <strong
+                                    >Главное — работающий сайт, который можно
+                                    показать знакомым и которым можно
+                                    пользоваться в повседневной жизни</strong
+                                >
+                            </p>
+                        </div>
+                    </div>
+                    <div class="about-grid">
+                        <div class="about-card">
+                            <div class="about-icon">
+                                <svg
+                                    width="48"
+                                    height="48"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                >
+                                    <path
+                                        d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z"
+                                    ></path>
+                                </svg>
+                            </div>
+                            <h3>Безопасный старт</h3>
+                            <p>
+                                Попробуй программирование без долгих и дорогих
+                                курсов. Поймёшь, твоё это или нет, всего за 5
+                                часов.
+                            </p>
+                        </div>
+                        <div class="about-card">
+                            <div class="about-icon">
+                                <svg
+                                    width="48"
+                                    height="48"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                >
+                                    <rect
+                                        x="3"
+                                        y="3"
+                                        width="18"
+                                        height="18"
+                                        rx="2"
+                                        ry="2"
+                                    ></rect>
+                                    <line x1="9" y1="9" x2="15" y2="9"></line>
+                                    <line x1="9" y1="13" x2="15" y2="13"></line>
+                                    <line x1="9" y1="17" x2="15" y2="17"></line>
+                                </svg>
+                            </div>
+                            <h3>Реальный результат</h3>
+                            <p>
+                                С первого занятия пишешь код. К концу интенсива
+                                — готовый работающий сайт, который можно
+                                показать друзьям.
+                            </p>
+                        </div>
+                        <div class="about-card">
+                            <div class="about-icon">
+                                <svg
+                                    width="48"
+                                    height="48"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                >
+                                    <path
+                                        d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"
+                                    ></path>
+                                    <circle cx="9" cy="7" r="4"></circle>
+                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                </svg>
+                            </div>
+                            <h3>Человеческий подход</h3>
+                            <p>
+                                Я сам бывший гуманитарий. Объясняю без
+                                техно-жаргона, через понятные аналогии из жизни.
+                            </p>
+                        </div>
+                    </div>
                 </div>
-              </div>
-              <div class="lesson">
-                <div class="lesson-time">11:30</div>
-                <div class="lesson-info">
-                  <h4>CSS: первые стили</h4>
-                  <p>Цвета, размеры, позиционирование</p>
+            </section>
+
+            <section
+                id="program"
+                class="program"
+                aria-labelledby="program-heading"
+            >
+                <div class="container">
+                    <h2 id="program-heading">Программа интенсива</h2>
+                    <div class="schedule">
+                        <div class="day">
+                            <div class="day-header">
+                                <h3>День 1: Суббота, 5 июля</h3>
+                                <span class="time">10:00 – 13:00 (GMT+4)</span>
+                            </div>
+                            <div class="day-content">
+                                <div class="lesson">
+                                    <div class="lesson-time">10:00</div>
+                                    <div class="lesson-info">
+                                        <h4>Добро пожаловать</h4>
+                                        <p>
+                                            Знакомство, настройка рабочего
+                                            пространства
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="lesson">
+                                    <div class="lesson-time">10:30</div>
+                                    <div class="lesson-info">
+                                        <h4>HTML: каркас страницы</h4>
+                                        <p>
+                                            Теги, структура документа, первые
+                                            элементы
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="lesson">
+                                    <div class="lesson-time">11:30</div>
+                                    <div class="lesson-info">
+                                        <h4>CSS: первые стили</h4>
+                                        <p>Цвета, размеры, позиционирование</p>
+                                    </div>
+                                </div>
+                                <div class="lesson">
+                                    <div class="lesson-time">12:15</div>
+                                    <div class="lesson-info">
+                                        <h4>JavaScript: оживляем страницу</h4>
+                                        <p>
+                                            Переменные, функции, первая
+                                            интерактивность
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="day">
+                            <div class="day-header">
+                                <h3>День 2: Воскресенье, 6 июля</h3>
+                                <span class="time">10:00 – 12:00 (GMT+4)</span>
+                            </div>
+                            <div class="day-content">
+                                <div class="lesson">
+                                    <div class="lesson-time">10:00</div>
+                                    <div class="lesson-info">
+                                        <h4>Разбор кода + Q&A</h4>
+                                        <p>
+                                            Отвечаем на вопросы, закрепляем
+                                            материал
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="lesson">
+                                    <div class="lesson-time">10:30</div>
+                                    <div class="lesson-info">
+                                        <h4>Продвинутые возможности</h4>
+                                        <p>
+                                            div & псевдоклассы, условия if/else
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="lesson">
+                                    <div class="lesson-time">11:15</div>
+                                    <div class="lesson-info">
+                                        <h4>Финальный проект</h4>
+                                        <p>
+                                            Собираем всё вместе, публикуем сайт
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="lesson">
+                                    <div class="lesson-time">11:45</div>
+                                    <div class="lesson-info">
+                                        <h4>Что дальше?</h4>
+                                        <p>
+                                            Варианты развития, ресурсы, план
+                                            действий
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="schedule-note">
+                        <p>Каждые 55 минут — 5-минутная пауза.</p>
+                    </div>
                 </div>
-              </div>
-              <div class="lesson">
-                <div class="lesson-time">12:15</div>
-                <div class="lesson-info">
-                  <h4>JavaScript: оживляем страницу</h4>
-                  <p>Переменные, функции, первая интерактивность</p>
+            </section>
+
+            <section
+                id="results"
+                class="results"
+                aria-labelledby="results-heading"
+            >
+                <div class="container">
+                    <h2 id="results-heading">Что ты получишь</h2>
+                    <div class="results-grid">
+                        <div class="result-card">
+                            <div class="result-number">01</div>
+                            <h3>Работающий сайт</h3>
+                            <p>
+                                Готовая страница, опубликованная в интернете.
+                                Можно показать друзьям или добавить в резюме.
+                            </p>
+                        </div>
+                        <div class="result-card">
+                            <div class="result-number">02</div>
+                            <h3>Базовые навыки</h3>
+                            <p>
+                                HTML, CSS и JavaScript — фундамент
+                                веб-разработки. Основа для дальнейшего обучения.
+                            </p>
+                        </div>
+                        <div class="result-card">
+                            <div class="result-number">03</div>
+                            <h3>Материалы курса</h3>
+                            <p>
+                                Запись интенсива, конспект-шпаргалка, чек-лист
+                                ресурсов для самостоятельного изучения.
+                            </p>
+                        </div>
+                        <div class="result-card">
+                            <div class="result-number">04</div>
+                            <h3>Поддержка</h3>
+                            <p>
+                                Доступ к чату с другими участниками и
+                                преподавателем. Помощь и ответы на вопросы.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="results-benefits">
+                        <h3>Как это поможет тебе в жизни?</h3>
+                        <ul>
+                            <li>
+                                <strong>Экономия времени и денег:</strong>
+                                поймёшь, стоит ли вкладываться в IT дальше,
+                                прежде чем проходить длинные курсы.
+                            </li>
+                            <li>
+                                <strong>Понимание IT-сферы:</strong>
+                                разберёшься, какие роли бывают в IT и сколько
+                                времени потребуется для следующего шага.
+                            </li>
+                            <li>
+                                <strong>Уверенность в себе:</strong> получишь
+                                поддержку и уверенность, что даже с
+                                "гуманитарным" складом ума можно освоить основы
+                                программирования.
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-              </div>
-            </div>
-          </div>
-          <div class="day">
-            <div class="day-header">
-              <h3>День 2: Воскресенье, 6 июля</h3>
-              <span class="time">10:00 – 12:00 (GMT+4)</span>
-            </div>
-            <div class="day-content">
-              <div class="lesson">
-                <div class="lesson-time">10:00</div>
-                <div class="lesson-info">
-                  <h4>Разбор кода + Q&A</h4>
-                  <p>Отвечаем на вопросы, закрепляем материал</p>
+            </section>
+
+            <section
+                id="about-me"
+                class="about-me"
+                aria-labelledby="about-me-heading"
+            >
+                <div class="container">
+                    <h2 id="about-me-heading">Немного обо мне</h2>
+                    <div class="about-me-content">
+                        <p>
+                            Я — журналист по образованию, и в школе всегда был
+                            не силён в математике. Осваивать программирование
+                            начал самостоятельно: смотрел видео, читал статьи,
+                            но часто сталкивался с тем, что объяснения были
+                            сложными и непонятными лично для меня. Иногда
+                            приходилось возвращаться к теме несколько раз,
+                            прежде чем всё начало складываться в единую картину.
+                            <br />
+                            <br />
+                            Три года назад я начал делать сайты на фрилансе, а
+                            два года назад стал обучать разработке один на один.
+                            С этого года хочу делиться своим опытом с более
+                            широкой аудиторией — поэтому запускаю интенсивы для
+                            новичков и гуманитариев.
+                            <br />
+                            <br />
+                            Я веду канал на
+                            <a href="https://www.youtube.com/@humanitarius101"
+                                >YouTube ↗</a
+                            >
+                            и в <a href="https://t.me/busysam">Telegram ↗</a>,
+                            где рассказываю о цифровой гигиене и приватности —
+                            тоже простым и понятным языком.
+                        </p>
+                        <img src="../../me.JPG" alt="Фото Сергея Манвелова" />
+                    </div>
                 </div>
-              </div>
-              <div class="lesson">
-                <div class="lesson-time">10:30</div>
-                <div class="lesson-info">
-                  <h4>Продвинутые возможности</h4>
-                  <p>div & псевдоклассы, условия if/else</p>
+            </section>
+
+            <section
+                id="reviews"
+                class="reviews"
+                aria-labelledby="reviews-heading"
+            >
+                <div class="container">
+                    <h2 id="reviews-heading">Отзывы участников</h2>
+                    <div class="reviews-slider">
+                        <div class="review-card active">
+                            <div class="review-text">
+                                <p>
+                                    «Впервые столкнулся с программированием и с
+                                    первого же раза получился функционирующий
+                                    сайт! Более того, благодаря Сергею я понял
+                                    как это получилось и как все элементы
+                                    взаимодействуют между собой. На курсе много
+                                    практики и требуется полное включение,
+                                    благодаря чему есть возможность быстро
+                                    понять, интересно ли вам такое занятие»
+                                </p>
+                            </div>
+                            <div class="review-author">
+                                <div class="author-info">
+                                    <h4>
+                                        <a href="https://t.me/onikster">Илья</a>
+                                    </h4>
+                                    <p>27 лет, проектный менеджер, Мытищи</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="review-card">
+                            <div class="review-text">
+                                <p>
+                                    «Какая-то база по теме у меня была, но и
+                                    подзабыта была тоже — снова все разложили по
+                                    нужным полочкам, а JS, брошенный когда-то на
+                                    старте, показался уже не таким страшным)
+                                    Все, о чем рассказывает Сергей, сразу же
+                                    применяется на практике, за это большой лайк
+                                    👍🏻»
+                                </p>
+                            </div>
+                            <div class="review-author">
+                                <div class="author-info">
+                                    <h4>
+                                        <a href="https://t.me/st_annie">Аня</a>
+                                    </h4>
+                                    <p>27 лет, UX-дизайнер, Тбилиси</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="review-card">
+                            <div class="review-text">
+                                <p>
+                                    «В 48 лет решила попробовать
+                                    программирование — думала, что поздно. Через
+                                    месяц занятий создала первый сайт!
+                                    Оказалось, мое системное мышление — это
+                                    преимущество, а не недостаток. Логика кода
+                                    далась легче, чем я ожидала. Теперь думаю
+                                    стать backend-разработчиком, но параллельно
+                                    с основной работой»
+                                </p>
+                            </div>
+                            <div class="review-author">
+                                <div class="author-info">
+                                    <h4>Милена</h4>
+                                    <p>48 лет, госслужащая, Тбилиси</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="review-card">
+                            <div class="review-text">
+                                <p>
+                                    «Очень насыщенный и полезный интенсив,
+                                    который реально помог прокачать навыки. К
+                                    концу курса у меня уже был свой рабочий сайт
+                                    — пусть простой, но полностью мой! После
+                                    интенсива появилось больше уверенности,
+                                    теперь хочу двигаться дальше в IT»
+                                </p>
+                            </div>
+                            <div class="review-author">
+                                <div class="author-info">
+                                    <h4>
+                                        <a href="https://t.me/nutscrackeer"
+                                            >Алексей</a
+                                        >
+                                    </h4>
+                                    <p>26 лет, инженер, Москва</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-nav">
+                        <button
+                            class="review-prev"
+                            aria-label="Предыдущий отзыв"
+                        >
+                            ←
+                        </button>
+                        <div class="review-dots">
+                            <span class="dot active"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </div>
+                        <button
+                            class="review-next"
+                            aria-label="Следующий отзыв"
+                        >
+                            →
+                        </button>
+                    </div>
                 </div>
-              </div>
-              <div class="lesson">
-                <div class="lesson-time">11:15</div>
-                <div class="lesson-info">
-                  <h4>Финальный проект</h4>
-                  <p>Собираем всё вместе, публикуем сайт</p>
+            </section>
+
+            <section
+                id="pricing"
+                class="pricing"
+                aria-labelledby="pricing-heading"
+            >
+                <div class="container">
+                    <h2 id="pricing-heading">Выберите тариф</h2>
+                    <div class="pricing-grid">
+                        <div class="price-card">
+                            <h3>Base</h3>
+                            <div class="price">
+                                <span class="amount">$50</span>
+                                <span class="currency">/ 4000₽ / 140₾</span>
+                            </div>
+                            <ul class="features">
+                                <li>
+                                    <svg
+                                        width="20"
+                                        height="20"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="2"
+                                    >
+                                        <polyline
+                                            points="20 6 9 17 4 12"
+                                        ></polyline>
+                                    </svg>
+                                    <span>Участие в вебинаре</span>
+                                </li>
+                                <li>
+                                    <svg
+                                        width="20"
+                                        height="20"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="2"
+                                    >
+                                        <polyline
+                                            points="20 6 9 17 4 12"
+                                        ></polyline>
+                                    </svg>
+                                    <span>Групповой Telegram-чат</span>
+                                </li>
+                                <li>
+                                    <svg
+                                        width="20"
+                                        height="20"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="2"
+                                    >
+                                        <polyline
+                                            points="20 6 9 17 4 12"
+                                        ></polyline>
+                                    </svg>
+                                    <span>Конспект и материалы</span>
+                                </li>
+                                <li>
+                                    <svg
+                                        width="20"
+                                        height="20"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="2"
+                                    >
+                                        <polyline
+                                            points="20 6 9 17 4 12"
+                                        ></polyline>
+                                    </svg>
+                                    <span>Запись интенсива</span>
+                                </li>
+                            </ul>
+                            <button
+                                class="btn btn-secondary enroll-btn"
+                                data-tariff="base"
+                                aria-haspopup="dialog"
+                                aria-expanded="false"
+                            >
+                                Записаться
+                            </button>
+                        </div>
+                        <div class="price-card featured">
+                            <div class="badge">Популярный</div>
+                            <h3>Premium</h3>
+                            <div class="price">
+                                <span class="amount">$60</span>
+                                <span class="currency">/ 4500₽ / 155₾</span>
+                            </div>
+                            <ul class="features">
+                                <li>
+                                    <svg
+                                        width="20"
+                                        height="20"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="2"
+                                    >
+                                        <polyline
+                                            points="20 6 9 17 4 12"
+                                        ></polyline>
+                                    </svg>
+                                    <span>Всё из тарифа Base</span>
+                                </li>
+                                <li>
+                                    <svg
+                                        width="20"
+                                        height="20"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="2"
+                                    >
+                                        <polyline
+                                            points="20 6 9 17 4 12"
+                                        ></polyline>
+                                    </svg>
+                                    <span
+                                        >30-мин персональная консультация</span
+                                    >
+                                </li>
+                                <li>
+                                    <svg
+                                        width="20"
+                                        height="20"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="2"
+                                    >
+                                        <polyline
+                                            points="20 6 9 17 4 12"
+                                        ></polyline>
+                                    </svg>
+                                    <span>Индивидуальный план развития</span>
+                                </li>
+                                <li>
+                                    <svg
+                                        width="20"
+                                        height="20"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="2"
+                                    >
+                                        <polyline
+                                            points="20 6 9 17 4 12"
+                                        ></polyline>
+                                    </svg>
+                                    <span>Приоритетная поддержка</span>
+                                </li>
+                            </ul>
+                            <button
+                                class="btn btn-primary enroll-btn"
+                                data-tariff="premium"
+                                aria-haspopup="dialog"
+                                aria-expanded="false"
+                            >
+                                Записаться
+                            </button>
+                        </div>
+                    </div>
+                    <div class="guarantee">
+                        <svg
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                        >
+                            <path
+                                d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z"
+                            ></path>
+                        </svg>
+                        <p>
+                            <strong>Гарантия возврата:</strong> 100% за 24 часа
+                            до старта, 50% после первого дня
+                        </p>
+                    </div>
+                    <div class="payment-info">
+                        <h3>Как происходит оплата и возврат?</h3>
+                        <ol>
+                            <li>
+                                Жмёшь «Записаться» → получаешь реквизиты для
+                                оплаты: СБП (для банков РФ), TBC банк (для
+                                грузинских банков — доллары, евро, лари по
+                                текущему курсу), а также PayPal. Цены указаны в
+                                долларах, рублях и лари.
+                            </li>
+                            <li>
+                                После оплаты приходит ссылка на чат в Telegram,
+                                где уже будет доступна ссылка на Teams.
+                            </li>
+                            <li>
+                                Возвраты: 100% — за 24 ч до старта; 50% — если
+                                остановился после первого дня. Деньги вернутся
+                                на тот же счёт, с которого были отправлены
+                            </li>
+                        </ol>
+                    </div>
                 </div>
-              </div>
-              <div class="lesson">
-                <div class="lesson-time">11:45</div>
-                <div class="lesson-info">
-                  <h4>Что дальше?</h4>
-                  <p>Варианты развития, ресурсы, план действий</p>
+            </section>
+
+            <section id="faq" class="faq" aria-labelledby="faq-heading">
+                <div class="container">
+                    <h2 id="faq-heading">Частые вопросы</h2>
+
+                    <div class="faq-grid">
+                        <div class="faq-item">
+                            <button class="faq-question">
+                                <span
+                                    >Я никогда не писал код. Реально успею
+                                    что-то сделать?</span
+                                >
+                                <svg
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                >
+                                    <polyline
+                                        points="6 9 12 15 18 9"
+                                    ></polyline>
+                                </svg>
+                            </button>
+                            <div class="faq-answer">
+                                <p>
+                                    Да! Мы идём от абсолютного «нуля».
+                                    Шаг&nbsp;1 — вставим готовый тег, шаг&nbsp;2
+                                    — поменяем одно слово, шаг&nbsp;3 — увидим
+                                    результат в браузере. 90 % времени вы
+                                    повторяете за мной, а я комментирую «почему
+                                    так». Цель — показать, что даже самый
+                                    «гуманитарный» мозг способен на первую
+                                    строчку кода.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <button class="faq-question">
+                                <span>Мне 40+. Не поздно ли начинать?</span>
+                                <svg
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                >
+                                    <polyline
+                                        points="6 9 12 15 18 9"
+                                    ></polyline>
+                                </svg>
+                            </button>
+                            <div class="faq-answer">
+                                <p>
+                                    Возраст не ограничение. Среди моих учеников
+                                    была 47-летняя сотрудница посольства,
+                                    которая через два месяца после начала
+                                    занятий сверстала лендинг для своего
+                                    друга-писателя. Опыт и системное мышление
+                                    нередко помогают быстрее схватывать логику,
+                                    чем у 20-летних.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <button class="faq-question">
+                                <span
+                                    >Поможет ли интенсив сразу найти
+                                    работу?</span
+                                >
+                                <svg
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                >
+                                    <polyline
+                                        points="6 9 12 15 18 9"
+                                    ></polyline>
+                                </svg>
+                            </button>
+                            <div class="faq-answer">
+                                <p>
+                                    За 5 часов вы не станете джуном. Зато
+                                    поймёте, нравится ли процесс, какие роли в
+                                    веб-разработке существуют и сколько усилий
+                                    нужно вложить дальше. Это «дешёвая ошибка»:
+                                    лучше потратить $50 (4000₽/140₾) и 5 часов,
+                                    чем 6 месяцев и 60 000 ₽ на курсе, который
+                                    может не зайти.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <button class="faq-question">
+                                <span>Что нужно подготовить заранее?</span>
+                                <svg
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                >
+                                    <polyline
+                                        points="6 9 12 15 18 9"
+                                    ></polyline>
+                                </svg>
+                            </button>
+                            <div class="faq-answer">
+                                <p>
+                                    Браузер Chrome/Firefox, наушники + микрофон
+                                    и блокнот для заметок. Никаких IDE и
+                                    установки Node.js — всё делаем в CodeSandbox
+                                    прямо в окне браузера.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <button class="faq-question">
+                                <span>Что если я пропущу один из дней?</span>
+                                <svg
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                >
+                                    <polyline
+                                        points="6 9 12 15 18 9"
+                                    ></polyline>
+                                </svg>
+                            </button>
+                            <div class="faq-answer">
+                                <p>
+                                    Пропустил субботу — получаешь скидку 50 % на
+                                    следующий поток. Пропустил воскресенье —
+                                    вышлю запись, конспект и помогу с вопросами
+                                    в чате. Всегда можно пересесть в новый
+                                    поток.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="faq-collapsed" style="display: none">
+                            <div class="faq-item">
+                                <button class="faq-question">
+                                    <span
+                                        >Можно ли получить сертификат о
+                                        прохождении?</span
+                                    >
+                                    <svg
+                                        width="24"
+                                        height="24"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="2"
+                                    >
+                                        <polyline
+                                            points="6 9 12 15 18 9"
+                                        ></polyline>
+                                    </svg>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>
+                                        Официального сертификата нет — это всего
+                                        5 часов. Зато у вас будет готовый сайт в
+                                        портфолио и понимание основ
+                                        веб-разработки.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <button class="faq-question">
+                                    <span
+                                        >Какой софт нужно установить
+                                        заранее?</span
+                                    >
+                                    <svg
+                                        width="24"
+                                        height="24"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="2"
+                                    >
+                                        <polyline
+                                            points="6 9 12 15 18 9"
+                                        ></polyline>
+                                    </svg>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>
+                                        Ничего! Работаем в браузере через
+                                        CodeSandbox. Достаточно Google Chrome
+                                        или Firefox.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div
+                            class="faq-show-more-container"
+                            style="text-align: center; margin-top: 2rem"
+                        >
+                            <button class="btn btn-secondary faq-show-more">
+                                Показать ещё
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="faq-contact">
+                        <p>
+                            Не нашли свой вопрос? Напишите мне в Telegram
+                            <a href="https://t.me/kawaiier" target="_blank"
+                                >@kawaiier</a
+                            >
+                        </p>
+                    </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="schedule-note">
-          <p>Каждые 55 минут — 5-минутная пауза.</p>
-        </div>
-      </div>
-    </section>
+            </section>
 
-    <section id="results" class="results">
-      <div class="container">
-        <h2>Что ты получишь</h2>
-        <div class="results-grid">
-          <div class="result-card">
-            <div class="result-number">01</div>
-            <h3>Работающий сайт</h3>
-            <p>
-              Готовая страница, опубликованная в интернете. Можно показать
-              друзьям или добавить в резюме.
-            </p>
-          </div>
-          <div class="result-card">
-            <div class="result-number">02</div>
-            <h3>Базовые навыки</h3>
-            <p>
-              HTML, CSS и JavaScript — фундамент веб-разработки. Основа для
-              дальнейшего обучения.
-            </p>
-          </div>
-          <div class="result-card">
-            <div class="result-number">03</div>
-            <h3>Материалы курса</h3>
-            <p>
-              Запись интенсива, конспект-шпаргалка, чек-лист ресурсов для
-              самостоятельного изучения.
-            </p>
-          </div>
-          <div class="result-card">
-            <div class="result-number">04</div>
-            <h3>Поддержка</h3>
-            <p>
-              Доступ к чату с другими участниками и преподавателем. Помощь и
-              ответы на вопросы.
-            </p>
-          </div>
-        </div>
-        <div class="results-benefits">
-          <h3>Как это поможет тебе в жизни?</h3>
-          <ul>
-            <li>
-              <strong>Экономия времени и денег:</strong> поймёшь, стоит ли
-              вкладываться в IT дальше, прежде чем проходить длинные курсы.
-            </li>
-            <li>
-              <strong>Понимание IT-сферы:</strong> разберёшься, какие роли
-              бывают в IT и сколько времени потребуется для следующего шага.
-            </li>
-            <li>
-              <strong>Уверенность в себе:</strong> получишь поддержку и
-              уверенность, что даже с "гуманитарным" складом ума можно освоить
-              основы программирования.
-            </li>
-          </ul>
-        </div>
-      </div>
-    </section>
+            <section class="cta-section" aria-labelledby="cta-heading">
+                <div class="container">
+                    <div class="cta-content">
+                        <h2 id="cta-heading">Готовы попробовать?</h2>
+                        <p>
+                            Осталось всего
+                            <span class="spots-left">6 мест</span>. Встречаемся
+                            5 июля в 10:00!
+                        </p>
+                        <a href="#pricing" class="btn btn-primary btn-large"
+                            >Записаться на интенсив</a
+                        >
+                    </div>
+                </div>
+            </section>
+        </main>
 
-    <section id="about-me" class="about-me">
-      <div class="container">
-        <h2>Немного обо мне</h2>
-        <div class="about-me-content">
-          <p>
-            Я — журналист по образованию, и в школе всегда был не силён в
-            математике. Осваивать программирование начал самостоятельно: смотрел
-            видео, читал статьи, но часто сталкивался с тем, что объяснения были
-            сложными и непонятными лично для меня. Иногда приходилось
-            возвращаться к теме несколько раз, прежде чем всё начало
-            складываться в единую картину.
-            <br />
-            <br />
-            Три года назад я начал делать сайты на фрилансе, а два года назад
-            стал обучать разработке один на один. С этого года хочу делиться
-            своим опытом с более широкой аудиторией — поэтому запускаю интенсивы
-            для новичков и гуманитариев.
-            <br />
-            <br />
-            Я веду канал на
-            <a href="https://www.youtube.com/@humanitarius101">YouTube ↗</a> и в
-            <a href="https://t.me/busysam">Telegram ↗</a>, где рассказываю о
-            цифровой гигиене и приватности — тоже простым и понятным языком.
-          </p>
-          <img src="../../me.JPG" alt="me" />
-        </div>
-      </div>
-    </section>
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-info">
+                        <p>&copy; 2025 humanitarius. P/E Sergei Manvelov</p>
+                        <p>
+                            Есть вопросы? Пишите в Telegram
+                            <a href="https://t.me/kawaiier" target="_blank"
+                                >@kawaiier</a
+                            >
+                        </p>
+                        <p>
+                            <a
+                                href="/humanitarius/workshop/agreement.html"
+                                target="_blank"
+                                >Публичная оферта</a
+                            >
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
 
-    <section id="reviews" class="reviews">
-      <div class="container">
-        <h2>Отзывы участников</h2>
-        <div class="reviews-slider">
-          <div class="review-card active">
-            <div class="review-text">
-              <p>
-                «Впервые столкнулся с программированием и с первого же раза
-                получился функционирующий сайт! Более того, благодаря Сергею я
-                понял как это получилось и как все элементы взаимодействуют
-                между собой. На курсе много практики и требуется полное
-                включение, благодаря чему есть возможность быстро понять,
-                интересно ли вам такое занятие»
-              </p>
-            </div>
-            <div class="review-author">
-              <div class="author-info">
-                <h4><a href="https://t.me/onikster">Илья</a></h4>
-                <p>27 лет, проектный менеджер, Мытищи</p>
-              </div>
-            </div>
-          </div>
-          <div class="review-card">
-            <div class="review-text">
-              <p>
-                «Какая-то база по теме у меня была, но и подзабыта была тоже —
-                снова все разложили по нужным полочкам, а JS, брошенный когда-то
-                на старте, показался уже не таким страшным) Все, о чем
-                рассказывает Сергей, сразу же применяется на практике, за это
-                большой лайк 👍🏻»
-              </p>
-            </div>
-            <div class="review-author">
-              <div class="author-info">
-                <h4><a href="https://t.me/st_annie">Аня</a></h4>
-                <p>27 лет, UX-дизайнер, Тбилиси</p>
-              </div>
-            </div>
-          </div>
-          <div class="review-card">
-            <div class="review-text">
-              <p>
-                  «В 48 лет решила попробовать программирование — думала, что поздно. Через месяц занятий создала первый сайт! Оказалось, мое системное мышление — это преимущество, а не недостаток. Логика кода далась легче, чем я ожидала. Теперь думаю стать backend-разработчиком, но параллельно с основной работой»
-              </p>
-            </div>
-            <div class="review-author">
-              <div class="author-info">
-                <h4>Милена</h4>
-                <p>48 лет, госслужащая, Тбилиси</p>
-              </div>
-            </div>
-          </div>
-          <div class="review-card">
-            <div class="review-text">
-              <p>
-                «Очень насыщенный и полезный интенсив, который реально помог
-                прокачать навыки. К концу курса у меня уже был свой рабочий сайт
-                — пусть простой, но полностью мой! После интенсива появилось
-                больше уверенности, теперь хочу двигаться дальше в IT»
-              </p>
-            </div>
-            <div class="review-author">
-              <div class="author-info">
-                <h4><a href="https://t.me/nutscrackeer">Алексей</a></h4>
-                <p>26 лет, инженер, Москва</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="review-nav">
-          <button class="review-prev" aria-label="Предыдущий отзыв">←</button>
-          <div class="review-dots">
-            <span class="dot active"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-          </div>
-          <button class="review-next" aria-label="Следующий отзыв">→</button>
-        </div>
-      </div>
-    </section>
-
-    <section id="pricing" class="pricing">
-      <div class="container">
-        <h2>Выберите тариф</h2>
-        <div class="pricing-grid">
-          <div class="price-card">
-            <h3>Base</h3>
-            <div class="price">
-              <span class="amount">$50</span>
-              <span class="currency">/ 4000₽ / 140₾</span>
-            </div>
-            <ul class="features">
-              <li>
-                <svg
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                >
-                  <polyline points="20 6 9 17 4 12"></polyline>
-                </svg>
-                <span>Участие в вебинаре</span>
-              </li>
-              <li>
-                <svg
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                >
-                  <polyline points="20 6 9 17 4 12"></polyline>
-                </svg>
-                <span>Групповой Telegram-чат</span>
-              </li>
-              <li>
-                <svg
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                >
-                  <polyline points="20 6 9 17 4 12"></polyline>
-                </svg>
-                <span>Конспект и материалы</span>
-              </li>
-              <li>
-                <svg
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                >
-                  <polyline points="20 6 9 17 4 12"></polyline>
-                </svg>
-                <span>Запись интенсива</span>
-              </li>
-            </ul>
-            <button class="btn btn-secondary enroll-btn" data-tariff="base">
-              Записаться
-            </button>
-          </div>
-          <div class="price-card featured">
-            <div class="badge">Популярный</div>
-            <h3>Premium</h3>
-            <div class="price">
-              <span class="amount">$60</span>
-              <span class="currency">/ 4500₽ / 155₾</span>
-            </div>
-            <ul class="features">
-              <li>
-                <svg
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                >
-                  <polyline points="20 6 9 17 4 12"></polyline>
-                </svg>
-                <span>Всё из тарифа Base</span>
-              </li>
-              <li>
-                <svg
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                >
-                  <polyline points="20 6 9 17 4 12"></polyline>
-                </svg>
-                <span>30-мин персональная консультация</span>
-              </li>
-              <li>
-                <svg
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                >
-                  <polyline points="20 6 9 17 4 12"></polyline>
-                </svg>
-                <span>Индивидуальный план развития</span>
-              </li>
-              <li>
-                <svg
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                >
-                  <polyline points="20 6 9 17 4 12"></polyline>
-                </svg>
-                <span>Приоритетная поддержка</span>
-              </li>
-            </ul>
-            <button class="btn btn-primary enroll-btn" data-tariff="premium">
-              Записаться
-            </button>
-          </div>
-        </div>
-        <div class="guarantee">
-          <svg
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-          >
-            <path
-              d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z"
-            ></path>
-          </svg>
-          <p>
-            <strong>Гарантия возврата:</strong> 100% за 24 часа до старта, 50%
-            после первого дня
-          </p>
-        </div>
-        <div class="payment-info">
-          <h3>Как происходит оплата и возврат?</h3>
-          <ol>
-            <li>
-              Жмёшь «Записаться» → получаешь реквизиты для оплаты: СБП (для
-              банков РФ), TBC банк (для грузинских банков — доллары, евро, лари
-              по текущему курсу), а также PayPal. Цены указаны в долларах, рублях и лари.
-            </li>
-            <li>
-              После оплаты приходит ссылка на чат в Telegram, где уже будет
-              доступна ссылка на Teams.
-            </li>
-            <li>
-              Возвраты: 100% — за 24 ч до старта; 50% — если остановился после
-              первого дня. Деньги вернутся на тот же счёт, с которого были
-              отправлены
-            </li>
-          </ol>
-        </div>
-      </div>
-    </section>
-
-    <section id="faq" class="faq">
-      <div class="container">
-        <h2>Частые вопросы</h2>
-
-        <div class="faq-grid">
-          <div class="faq-item">
-            <button class="faq-question">
-              <span>Я никогда не писал код. Реально успею что-то сделать?</span>
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <polyline points="6 9 12 15 18 9"></polyline>
-              </svg>
-            </button>
-            <div class="faq-answer">
-              <p>
-                Да! Мы идём от абсолютного «нуля». Шаг&nbsp;1 — вставим готовый
-                тег, шаг&nbsp;2 — поменяем одно слово, шаг&nbsp;3 — увидим
-                результат в браузере. 90 % времени вы повторяете за мной, а я
-                комментирую «почему так». Цель — показать, что даже самый
-                «гуманитарный» мозг способен на первую строчку кода.
-              </p>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question">
-              <span>Мне 40+. Не поздно ли начинать?</span>
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <polyline points="6 9 12 15 18 9"></polyline>
-              </svg>
-            </button>
-            <div class="faq-answer">
-              <p>
-                Возраст не ограничение. Среди моих учеников была 47-летняя
-                сотрудница посольства, которая через два месяца после начала
-                занятий сверстала лендинг для своего друга-писателя. Опыт и
-                системное мышление нередко помогают быстрее схватывать логику,
-                чем у 20-летних.
-              </p>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question">
-              <span>Поможет ли интенсив сразу найти работу?</span>
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <polyline points="6 9 12 15 18 9"></polyline>
-              </svg>
-            </button>
-            <div class="faq-answer">
-              <p>
-                За 5 часов вы не станете джуном. Зато поймёте, нравится ли
-                процесс, какие роли в веб-разработке существуют и сколько усилий
-                нужно вложить дальше. Это «дешёвая ошибка»: лучше потратить $50
-                (4000₽/140₾) и 5 часов, чем 6 месяцев и 60 000 ₽ на курсе, который
-                может не зайти.
-              </p>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question">
-              <span>Что нужно подготовить заранее?</span>
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <polyline points="6 9 12 15 18 9"></polyline>
-              </svg>
-            </button>
-            <div class="faq-answer">
-              <p>
-                Браузер Chrome/Firefox, наушники + микрофон и блокнот для
-                заметок. Никаких IDE и установки Node.js — всё делаем в
-                CodeSandbox прямо в окне браузера.
-              </p>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-question">
-              <span>Что если я пропущу один из дней?</span>
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <polyline points="6 9 12 15 18 9"></polyline>
-              </svg>
-            </button>
-            <div class="faq-answer">
-              <p>
-                Пропустил субботу — получаешь скидку 50 % на следующий поток.
-                Пропустил воскресенье — вышлю запись, конспект и помогу с
-                вопросами в чате. Всегда можно пересесть в новый поток.
-              </p>
-            </div>
-          </div>
-          <div class="faq-collapsed">
-            <button class="faq-question">
-              <span>Я никогда не писал код. Реально успею что-то сделать?</span>
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-          </div>
-        </div>
-
-        <div class="faq-contact">
-          <p>
-            Не нашли свой вопрос? Напишите мне в Telegram
-            <a href="https://t.me/kawaiier" target="_blank">@kawaiier</a>
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section class="cta-section">
-      <div class="container">
-        <div class="cta-content">
-          <h2>Готовы попробовать?</h2>
-          <p>
-            Осталось всего <span class="spots-left">6 мест</span>. Встречаемся 5
-            июля в 10:00!
-          </p>
-          <a href="#pricing" class="btn btn-primary btn-large"
-            >Записаться на интенсив</a
-          >
-        </div>
-      </div>
-    </section>
-
-    <footer class="footer">
-      <div class="container">
-        <div class="footer-content">
-          <div class="footer-info">
-            <p>&copy; 2025 humanitarius. P/E Sergei Manvelov</p>
-            <p>
-              Есть вопросы? Пишите в Telegram
-              <a href="https://t.me/kawaiier" target="_blank">@kawaiier</a>
-            </p>
-            <p>
-              <a href="/humanitarius/workshop/agreement.html" target="_blank"
-                >Публичная оферта</a
-              >
-            </p>
-          </div>
-        </div>
-      </div>
-    </footer>
-
-    <div class="enrollment-modal" id="enrollmentModal">
-      <div class="modal-content">
-        <button class="modal-close">&times;</button>
-        <h3>Записаться на интенсив</h3>
-        <p class="modal-tariff">
-          Выбранный тариф: <span id="selectedTariff"></span>
-        </p>
-        <p>Для записи напишите мне в Telegram:</p>
-        <a href="https://t.me/kawaiier" target="_blank" class="btn btn-primary"
-          >Написать в Telegram</a
+        <div
+            class="enrollment-modal"
+            id="enrollmentModal"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="modal-title"
+            aria-describedby="modal-description"
         >
-        <p class="modal-note">
-          После оплаты вы получите ссылку на Teams и доступ к чату участников
-        </p>
-      </div>
-    </div>
-
-    <!-- Sticky Instagram Panel -->
-    <div class="instagram-sticky-panel">
-      <div class="container">
-        <div class="panel-content">
-          <div class="panel-text">
-            <span class="panel-title">Будьте в курсе новых интенсивов и анонсов!</span>
-            <span class="panel-subtitle">Подписывайтесь на мой Instagram</span>
-          </div>
-          <a href="https://instagram.com/humanitarius" target="_blank" rel="noopener noreferrer" class="btn btn-instagram">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" preserveAspectRatio="xMidYMid" viewBox="0 0 256 256" fill="currentColor">
-              <path d="M128 23.064c34.177 0 38.225.13 51.722.745 12.48.57 19.258 2.655 23.769 4.408 5.974 2.322 10.238 5.096 14.717 9.575 4.48 4.479 7.253 8.743 9.575 14.717 1.753 4.511 3.838 11.289 4.408 23.768.615 13.498.745 17.546.745 51.723 0 34.178-.13 38.226-.745 51.723-.57 12.48-2.655 19.257-4.408 23.768-2.322 5.974-5.096 10.239-9.575 14.718-4.479 4.479-8.743 7.253-14.717 9.574-4.511 1.753-11.289 3.839-23.769 4.408-13.495.616-17.543.746-51.722.746-34.18 0-38.228-.13-51.723-.746-12.48-.57-19.257-2.655-23.768-4.408-5.974-2.321-10.239-5.095-14.718-9.574-4.479-4.48-7.253-8.744-9.574-14.718-1.753-4.51-3.839-11.288-4.408-23.768-.616-13.497-.746-17.545-.746-51.723 0-34.177.13-38.225.746-51.722.57-12.48 2.655-19.258 4.408-23.769 2.321-5.974 5.095-10.238 9.574-14.717 4.48-4.48 8.744-7.253 14.718-9.575 4.51-1.753 11.288-3.838 23.768-4.408 13.497-.615 17.545-.745 51.723-.745M128 0C93.237 0 88.878.147 75.226.77c-13.625.622-22.93 2.786-31.071 5.95-8.418 3.271-15.556 7.648-22.672 14.764C14.367 28.6 9.991 35.738 6.72 44.155 3.555 52.297 1.392 61.602.77 75.226.147 88.878 0 93.237 0 128c0 34.763.147 39.122.77 52.774.622 13.625 2.785 22.93 5.95 31.071 3.27 8.417 7.647 15.556 14.763 22.672 7.116 7.116 14.254 11.492 22.672 14.763 8.142 3.165 17.446 5.328 31.07 5.95 13.653.623 18.012.77 52.775.77s39.122-.147 52.774-.77c13.624-.622 22.929-2.785 31.07-5.95 8.418-3.27 15.556-7.647 22.672-14.763 7.116-7.116 11.493-14.254 14.764-22.672 3.164-8.142 5.328-17.446 5.95-31.07.623-13.653.77-18.012.77-52.775s-.147-39.122-.77-52.774c-.622-13.624-2.786-22.929-5.95-31.07-3.271-8.418-7.648-15.556-14.764-22.672C227.4 14.368 220.262 9.99 211.845 6.72c-8.142-3.164-17.447-5.328-31.071-5.95C167.122.147 162.763 0 128 0Zm0 62.27C91.698 62.27 62.27 91.7 62.27 128c0 36.302 29.428 65.73 65.73 65.73 36.301 0 65.73-29.428 65.73-65.73 0-36.301-29.429-65.73-65.73-65.73Zm0 108.397c-23.564 0-42.667-19.103-42.667-42.667S104.436 85.333 128 85.333s42.667 19.103 42.667 42.667-19.103 42.667-42.667 42.667Zm83.686-110.994c0 8.484-6.876 15.36-15.36 15.36-8.483 0-15.36-6.876-15.36-15.36 0-8.483 6.877-15.36 15.36-15.36 8.484 0 15.36 6.877 15.36 15.36Z"/>
-            </svg>
-            Подписаться
-          </a>
+            <div class="modal-content">
+                <button class="modal-close" aria-label="Закрыть модальное окно">
+                    &times;
+                </button>
+                <h3 id="modal-title">Записаться на интенсив</h3>
+                <p class="modal-tariff" id="modal-description">
+                    Выбранный тариф: <span id="selectedTariff"></span>
+                </p>
+                <p>Для записи напишите мне в Telegram:</p>
+                <a
+                    href="https://t.me/kawaiier"
+                    target="_blank"
+                    class="btn btn-primary"
+                    >Написать в Telegram</a
+                >
+                <p class="modal-note">
+                    После оплаты вы получите ссылку на Teams и доступ к чату
+                    участников
+                </p>
+            </div>
         </div>
-      </div>
-    </div>
 
-    <script src="/humanitarius/workshop/script.js"></script>
-  </body>
+        <!-- Sticky Instagram Panel -->
+        <aside
+            class="instagram-sticky-panel"
+            aria-label="Подписка на Instagram"
+        >
+            <div class="container">
+                <div class="panel-content">
+                    <div class="panel-text">
+                        <span class="panel-title"
+                            >Будьте в курсе новых интенсивов и анонсов!</span
+                        >
+                        <span class="panel-subtitle"
+                            >Подписывайтесь на мой Instagram</span
+                        >
+                    </div>
+                    <a
+                        href="https://instagram.com/humanitarius"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="btn btn-instagram"
+                    >
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="20"
+                            height="20"
+                            preserveAspectRatio="xMidYMid"
+                            viewBox="0 0 256 256"
+                            fill="currentColor"
+                        >
+                            <path
+                                d="M128 23.064c34.177 0 38.225.13 51.722.745 12.48.57 19.258 2.655 23.769 4.408 5.974 2.322 10.238 5.096 14.717 9.575 4.48 4.479 7.253 8.743 9.575 14.717 1.753 4.511 3.838 11.289 4.408 23.768.615 13.498.745 17.546.745 51.723 0 34.178-.13 38.226-.745 51.723-.57 12.48-2.655 19.257-4.408 23.768-2.322 5.974-5.096 10.239-9.575 14.718-4.479 4.479-8.743 7.253-14.717 9.574-4.511 1.753-11.289 3.839-23.769 4.408-13.495.616-17.543.746-51.722.746-34.18 0-38.228-.13-51.723-.746-12.48-.57-19.257-2.655-23.768-4.408-5.974-2.321-10.239-5.095-14.718-9.574-4.479-4.48-7.253-8.744-9.574-14.718-1.753-4.51-3.839-11.288-4.408-23.768-.616-13.497-.746-17.545-.746-51.723 0-34.177.13-38.225.746-51.722.57-12.48 2.655-19.258 4.408-23.769 2.321-5.974 5.095-10.238 9.574-14.717 4.48-4.48 8.744-7.253 14.718-9.575 4.51-1.753 11.288-3.838 23.768-4.408 13.497-.615 17.545-.745 51.723-.745M128 0C93.237 0 88.878.147 75.226.77c-13.625.622-22.93 2.786-31.071 5.95-8.418 3.271-15.556 7.648-22.672 14.764C14.367 28.6 9.991 35.738 6.72 44.155 3.555 52.297 1.392 61.602.77 75.226.147 88.878 0 93.237 0 128c0 34.763.147 39.122.77 52.774.622 13.625 2.785 22.93 5.95 31.071 3.27 8.417 7.647 15.556 14.763 22.672 7.116 7.116 14.254 11.492 22.672 14.763 8.142 3.165 17.446 5.328 31.07 5.95 13.653.623 18.012.77 52.775.77s39.122-.147 52.774-.77c13.624-.622 22.929-2.785 31.07-5.95 8.418-3.27 15.556-7.647 22.672-14.763 7.116-7.116 11.493-14.254 14.764-22.672 3.164-8.142 5.328-17.446 5.95-31.07.623-13.653.77-18.012.77-52.775s-.147-39.122-.77-52.774c-.622-13.624-2.786-22.929-5.95-31.07-3.271-8.418-7.648-15.556-14.764-22.672C227.4 14.368 220.262 9.99 211.845 6.72c-8.142-3.164-17.447-5.328-31.071-5.95C167.122.147 162.763 0 128 0Zm0 62.27C91.698 62.27 62.27 91.7 62.27 128c0 36.302 29.428 65.73 65.73 65.73 36.301 0 65.73-29.428 65.73-65.73 0-36.301-29.429-65.73-65.73-65.73Zm0 108.397c-23.564 0-42.667-19.103-42.667-42.667S104.436 85.333 128 85.333s42.667 19.103 42.667 42.667-19.103 42.667-42.667 42.667Zm83.686-110.994c0 8.484-6.876 15.36-15.36 15.36-8.483 0-15.36-6.876-15.36-15.36 0-8.483 6.877-15.36 15.36-15.36 8.484 0 15.36 6.877 15.36 15.36Z"
+                            />
+                        </svg>
+                        Подписаться
+                    </a>
+                </div>
+            </div>
+        </aside>
+    </body>
 </html>

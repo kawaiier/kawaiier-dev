@@ -1,3 +1,4 @@
+document.addEventListener('DOMContentLoaded', function() {
 const mobileMenuToggle = document.querySelector(".mobile-menu-toggle");
 const navLinks = document.querySelector(".nav-links");
 const body = document.body;
@@ -124,52 +125,127 @@ const enrollmentModal = document.getElementById("enrollmentModal");
 const modalClose = document.querySelector(".modal-close");
 const enrollBtns = document.querySelectorAll(".enroll-btn");
 const selectedTariff = document.getElementById("selectedTariff");
+let modalOpener = null;
+
+// Get all focusable elements in the modal for focus trapping
+const getFocusableElements = (element) => {
+  return element.querySelectorAll(
+    'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+  );
+};
+
+// Trap focus within modal
+const trapFocus = (e) => {
+  const focusableElements = getFocusableElements(enrollmentModal);
+  const firstElement = focusableElements[0];
+  const lastElement = focusableElements[focusableElements.length - 1];
+
+  if (e.key === 'Tab') {
+    if (e.shiftKey) {
+      if (document.activeElement === firstElement) {
+        e.preventDefault();
+        lastElement.focus();
+      }
+    } else {
+      if (document.activeElement === lastElement) {
+        e.preventDefault();
+        firstElement.focus();
+      }
+    }
+  }
+};
+
+const openModal = (opener, tariff) => {
+  modalOpener = opener;
+  selectedTariff.textContent =
+    tariff === "base" ? "Base (4000₽)" : "Premium (4500₽)";
+  
+  // Update ARIA attributes
+  opener.setAttribute('aria-expanded', 'true');
+  
+  enrollmentModal.classList.add("active");
+  
+  // Focus the modal close button
+  modalClose.focus();
+  
+  // Add focus trap
+  document.addEventListener('keydown', trapFocus);
+  
+  // Prevent background scroll
+  document.body.style.overflow = 'hidden';
+};
+
+const closeModal = () => {
+  enrollmentModal.classList.remove("active");
+  
+  // Update ARIA attributes
+  if (modalOpener) {
+    modalOpener.setAttribute('aria-expanded', 'false');
+    modalOpener.focus(); // Restore focus to opener
+    modalOpener = null;
+  }
+  
+  // Remove focus trap
+  document.removeEventListener('keydown', trapFocus);
+  
+  // Restore background scroll
+  document.body.style.overflow = '';
+};
 
 enrollBtns.forEach((btn) => {
   btn.addEventListener("click", () => {
     const tariff = btn.getAttribute("data-tariff");
-    selectedTariff.textContent =
-      tariff === "base" ? "Base (4000₽)" : "Premium (4500₽)";
-    enrollmentModal.classList.add("active");
+    openModal(btn, tariff);
   });
 });
 
-modalClose.addEventListener("click", () => {
-  enrollmentModal.classList.remove("active");
-});
+modalClose.addEventListener("click", closeModal);
 
 enrollmentModal.addEventListener("click", (e) => {
   if (e.target === enrollmentModal) {
-    enrollmentModal.classList.remove("active");
+    closeModal();
   }
 });
 
-const animateOnScroll = () => {
+// Initialize reveal animations with IntersectionObserver
+const initRevealAnimations = () => {
   const elements = document.querySelectorAll(
-    ".about-card, .result-card, .price-card, .day",
+    ".about-card, .result-card, .price-card, .day"
   );
 
+  // Set initial state for all elements
   elements.forEach((element) => {
-    const elementTop = element.getBoundingClientRect().top;
-    const elementBottom = element.getBoundingClientRect().bottom;
-
-    if (elementTop < window.innerHeight && elementBottom > 0) {
-      element.style.opacity = "1";
-      element.style.transform = "translateY(0)";
-    }
-  });
-};
-
-document
-  .querySelectorAll(".about-card, .result-card, .price-card, .day")
-  .forEach((element) => {
     element.style.opacity = "0";
     element.style.transform = "translateY(20px)";
     element.style.transition = "opacity 0.6s ease, transform 0.6s ease";
   });
 
-window.addEventListener("scroll", animateOnScroll);
-window.addEventListener("load", animateOnScroll);
+  // Create intersection observer
+  const revealObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = "1";
+          entry.target.style.transform = "translateY(0)";
+          // Stop observing once animated
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      threshold: 0.1,
+      rootMargin: "0px 0px -50px 0px"
+    }
+  );
+
+  // Observe all elements
+  elements.forEach((element) => {
+    revealObserver.observe(element);
+  });
+};
+
+// Initialize animations
+initRevealAnimations();
 
 const codeLines = document.querySelectorAll(
   ".code-content .tag, .code-content .text",
@@ -249,7 +325,7 @@ document.querySelectorAll(".btn").forEach((btn) => {
 
 document.addEventListener("keydown", (e) => {
   if (e.key === "Escape" && enrollmentModal.classList.contains("active")) {
-    enrollmentModal.classList.remove("active");
+    closeModal();
   }
 
   if (e.key === "ArrowDown" || e.key === "ArrowUp") {
@@ -273,6 +349,7 @@ document.addEventListener("keydown", (e) => {
   }
 });
 
+// Scroll performance optimization variables (keeping for other potential uses)
 let scrollTimeout;
 const debounce = (func, wait) => {
   return function executedFunction(...args) {
@@ -285,12 +362,8 @@ const debounce = (func, wait) => {
   };
 };
 
-window.addEventListener("scroll", debounce(animateOnScroll, 10));
-
 window.addEventListener("load", () => {
   document.body.classList.add("loaded");
-
-  animateOnScroll();
 
   console.log("Сайт интенсива загружен успешно!");
 });
@@ -378,3 +451,5 @@ inputs.forEach((input) => {
 // Instagram panel is now permanent - no JavaScript needed
 
 console.log("Ого! Да вы хакер!");
+
+}); // End of DOMContentLoaded

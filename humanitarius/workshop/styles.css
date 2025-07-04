@@ -1115,18 +1115,50 @@ body {
 
     .about-me-content {
         flex-direction: column;
+        align-items: center;
         text-align: center;
+        gap: 1.5rem;
     }
 
     .about-me img {
-        max-width: 250px;
-        margin: 2rem auto 0;
+        height: 200px;
+        width: 200px;
+        min-width: 0;
+        max-width: 100%;
+        margin: 0 auto;
     }
 
     .footer-content {
         flex-direction: column;
         text-align: center;
         gap: 1.5rem;
+    }
+
+    .about-instructor,
+    .results-benefits,
+    .payment-info {
+        padding: 1.25rem 0.75rem;
+    }
+
+    .instagram-sticky-panel {
+        padding: 10px 0;
+    }
+
+    .instagram-sticky-panel .panel-content {
+        gap: 15px;
+    }
+
+    .instagram-sticky-panel .panel-title {
+        font-size: 14px;
+    }
+
+    .instagram-sticky-panel .panel-subtitle {
+        font-size: 12px;
+    }
+
+    .instagram-sticky-panel .btn-instagram {
+        padding: 8px 12px;
+        font-size: 13px;
     }
 }
 
@@ -1372,26 +1404,6 @@ body {
     line-height: 1.7;
 }
 
-@media (max-width: 768px) {
-    .about-instructor,
-    .results-benefits,
-    .payment-info {
-        padding: 1.25rem 0.75rem;
-    }
-    .about-me-content {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        gap: 1.5rem;
-    }
-    .about-me img {
-        height: 200px;
-        width: 200px;
-        min-width: 0;
-        max-width: 100%;
-        margin: 0 auto;
-    }
-}
 
 .instructor-cards {
     display: grid;
@@ -1572,28 +1584,6 @@ body {
     color: white;
 }
 
-@media (max-width: 768px) {
-    .instagram-sticky-panel {
-        padding: 10px 0;
-    }
-
-    .instagram-sticky-panel .panel-content {
-        gap: 15px;
-    }
-
-    .instagram-sticky-panel .panel-title {
-        font-size: 14px;
-    }
-
-    .instagram-sticky-panel .panel-subtitle {
-        font-size: 12px;
-    }
-
-    .instagram-sticky-panel .btn-instagram {
-        padding: 8px 12px;
-        font-size: 13px;
-    }
-}
 
 @media (max-width: 480px) {
     .instagram-sticky-panel .panel-text {
