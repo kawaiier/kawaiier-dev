@@ -1,0 +1,96 @@
+body {
+  text-align: center;
+}
+
+.formattingText {
+
+}
+
+div {
+  background-color: #C5FFD6;
+  max-width: 600px;
+  margin: auto;
+  padding: 16px;
+  border-radius: 16px;
+}
+
+h1 {
+  color: #C71585;
+  text-transform: uppercase;
+}
+
+h2 {
+  color: red;
+
+}
+
+img{
+
+}
+
+p {
+  font-size: 20px;
+  color: #750000;
+  font-family: cursive;
+  font-weight: bold;
+}
+
+button {
+  padding: 6px 6px 6px 6px;
+  margin: 10px 0px 10px 0px;
+  border-radius: 8px;
+
+}
+
+#soulEating {
+  color: lightblue;
+  background-color: black;
+}
+
+#soulEating:hover {
+  color: black;
+  background-color: #A6D2FF;
+}
+
+span {
+
+}
+
+#yearReset {
+  color: black;
+  background-color: pink;
+}
+
+#yearReset:hover {
+  color: white;
+  background-color: red;
+}
+
+#separateWays {
+  background-color: #FEE5DB;
+}
+
+a {
+  color: blue;
+}
+
+a:active {
+  color:#00FFB2;
+  background-color: #393939;
+  border-radius: 8px;
+  padding: 6px;
+}
+
+a:hover {
+  color:#00FCFF;
+  background-color: #393939;
+  border-radius: 8px;
+  padding: 6px;
+}
+
+@media (max-width: 1060px) {
+  img {
+    width: 40%;
+    lenght: 20%;
+  }
+}
