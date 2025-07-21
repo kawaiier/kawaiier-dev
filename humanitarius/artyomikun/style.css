@@ -3,11 +3,10 @@ body {
 }
 
 .formattingText {
-
 }
 
 div {
-  background-color: #C5FFD6;
+  background-color: #c5ffd6;
   max-width: 600px;
   margin: auto;
   padding: 16px;
@@ -15,17 +14,15 @@ div {
 }
 
 h1 {
-  color: #C71585;
+  color: #c71585;
   text-transform: uppercase;
 }
 
 h2 {
   color: red;
-
 }
 
-img{
-
+img {
 }
 
 p {
@@ -39,7 +36,6 @@ button {
   padding: 6px 6px 6px 6px;
   margin: 10px 0px 10px 0px;
   border-radius: 8px;
-
 }
 
 #soulEating {
@@ -49,11 +45,10 @@ button {
 
 #soulEating:hover {
   color: black;
-  background-color: #A6D2FF;
+  background-color: #a6d2ff;
 }
 
 span {
-
 }
 
 #yearReset {
@@ -67,7 +62,7 @@ span {
 }
 
 #separateWays {
-  background-color: #FEE5DB;
+  background-color: #fee5db;
 }
 
 a {
@@ -75,14 +70,14 @@ a {
 }
 
 a:active {
-  color:#00FFB2;
+  color: #00ffb2;
   background-color: #393939;
   border-radius: 8px;
   padding: 6px;
 }
 
 a:hover {
-  color:#00FCFF;
+  color: #00fcff;
   background-color: #393939;
   border-radius: 8px;
   padding: 6px;
@@ -91,6 +86,6 @@ a:hover {
 @media (max-width: 1060px) {
   img {
     width: 40%;
-    lenght: 20%;
+    height: 20%;
   }
 }
