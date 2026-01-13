@@ -51,8 +51,10 @@
     <link rel="canonical" href="https://kawaiier.dev" />
 
     <!-- Styles and Favicon -->
+    <link rel="preload" href="style.css" as="style" />
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="preload" href="me.webp" as="image" />
 
     <!-- Structured Data Markup for Personal Portfolio -->
     <script type="application/ld+json">
@@ -79,9 +81,11 @@
       src="https://cdn.counter.dev/script.js"
       data-id="543bdca5-3749-4923-8c4c-1593e1a96e57"
       data-utcoffset="4"
+      defer
     ></script>
   </head>
   <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
     <div class="container">
       <header>
         <div>
@@ -97,9 +101,11 @@
           alt="Serge Manvelov - Fullstack Web Developer"
           height="200"
           width="200"
+          loading="eager"
+          decoding="async"
         />
       </header>
-      <main>
+      <main id="main-content">
         <section aria-labelledby="about-me">
           <h2 id="about-me">Who Am I?</h2>
           <div>
